@@ -42,13 +42,32 @@ module.exports = function(grunt) {
 				}
 		},
 
+        phplint: {
+            options: {
+                swapPath: '/.phplint'
+            },
+            all: ['**/*.php']
+        },
+
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : '**/*.css'
+                },
+                options: {
+	            	proxy: "local.demos.upthemes.com",
+                    watchTask: true
+                }
+            }
+        },
+
 		watch: {
 			css: {
 				files: '**/*.scss',
 				tasks: ['sass']
 			},
 			scripts: {
-				files: ['src/**/*.js', 'Gruntfile.js' ],
+				files: ['js/**/*.js', 'Gruntfile.js' ],
 				tasks: ['jshint'],
 				options: {
 					interrupt: true,
@@ -64,6 +83,8 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-browser-sync');
+	grunt.loadNpmTasks('grunt-contrib-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-pot');
 	grunt.registerTask('default',['watch']);
