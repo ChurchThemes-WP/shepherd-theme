@@ -42,12 +42,12 @@ module.exports = function(grunt) {
 				}
 		},
 
-        phplint: {
-            options: {
-                swapPath: '/.phplint'
-            },
-            all: ['**/*.php']
-        },
+		phplint: {
+			options: {
+				swapPath: '/.phplint'
+			},
+			all: ['**/*.php']
+		},
 
         browserSync: {
             dev: {
