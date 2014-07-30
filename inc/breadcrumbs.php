@@ -7,7 +7,7 @@
  * @package shepherd
  */
 
-if ( ! function_exists( 'shep_breadcrumbs' ) ) :
+if ( ! function_exists( 'shepherd_breadcrumbs' ) ) :
 
 /**
  * Simple breadcrumbs
@@ -16,7 +16,7 @@ if ( ! function_exists( 'shep_breadcrumbs' ) ) :
  *
  * @link https://wordpress.org/plugins/really-simple-breadcrumb/ 	Adapted from Christoph Weil's Really Simple Breadcrumb plugin.
  */
-function shep_breadcrumbs() {
+function shepherd_breadcrumbs() {
 
     global $post;
 
@@ -30,7 +30,7 @@ function shep_breadcrumbs() {
 
 		if( get_option( 'show_on_front') == 'page' ){
 
-			echo '<a href="' . esc_url( shep_get_posts_url() ) . '">' . __( 'Blog' ) . '</a> ' . $separator;
+			echo '<a href="' . esc_url( shepherd_get_posts_url() ) . '">' . __( 'Blog' ) . '</a> ' . $separator;
 
 		}
 
@@ -81,7 +81,7 @@ function shep_breadcrumbs() {
 }
 endif;
 
-if ( ! function_exists( 'shep_get_posts_url' ) ) :
+if ( ! function_exists( 'shepherd_get_posts_url' ) ) :
 
 /**
  * Retrieve the posts page URI.
@@ -90,7 +90,7 @@ if ( ! function_exists( 'shep_get_posts_url' ) ) :
  *
  * @return 	string 	$posts_page_uri 	URL for the posts page if a custom homepage exists.
  */
-function shep_get_posts_url() {
+function shepherd_get_posts_url() {
 
 	if( get_option( 'show_on_front' ) == 'page') {
 
