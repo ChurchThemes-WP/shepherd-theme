@@ -1,0 +1,23 @@
+{
+  "name": "shepherd-pro",
+  "version": "0.0.1",
+  "description": "A blog theme for pastors.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/UpThemes/shepherd-pro.git"
+  },
+  "author": "UpThemes",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/UpThemes/shepherd-pro/issues"
+  },
+  "homepage": "https://github.com/UpThemes/shepherd-pro",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-pot": "~0.1.2"
+  }
+}
