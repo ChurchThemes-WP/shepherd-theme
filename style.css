@@ -68,7 +68,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Merriweather, Georgia, serif;
   font-weight: normal;
   font-style: normal;
   line-height: 150%;
@@ -745,17 +745,17 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: bold;
-  color: white;
+  color: #222222;
   text-rendering: optimizeLegibility;
   margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
-    color: white;
+    color: #6f6f6f;
     line-height: 0; }
 
 h1 {
@@ -778,7 +778,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: white;
+  color: #6f6f6f;
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 0.5rem; }
@@ -889,39 +889,17 @@ blockquote {
   blockquote cite {
     display: block;
     font-size: 0.8125rem;
-    color: white; }
+    color: #555555; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a,
     blockquote cite a:visited {
-      color: white; }
+      color: #555555; }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: white; }
-
-/* Microformats */
-.vcard {
-  display: inline-block;
-  margin: 0 0 1.25rem 0;
-  border: 1px solid #dddddd;
-  padding: 0.625rem 0.75rem; }
-  .vcard li {
-    margin: 0;
-    display: block; }
-  .vcard .fn {
-    font-weight: bold;
-    font-size: 0.9375rem; }
-
-.vevent .summary {
-  font-weight: bold; }
-.vevent abbr {
-  cursor: default;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  padding: 0 0.0625rem; }
+  color: #6f6f6f; }
 
 @media only screen and (min-width: 40.063em) {
   h1, h2, h3, h4, h5, h6 {
@@ -1016,51 +994,6 @@ blockquote p {
 
   .show-for-print {
     display: inherit !important; } }
-/*--------------------------------------------------------------
-3.0 Elements
---------------------------------------------------------------*/
-hr {
-  background-color: #cccccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em; }
-
-ul, ol {
-  margin: 0 0 1.5em 3em; }
-
-ul {
-  list-style: disc; }
-
-ol {
-  list-style: decimal; }
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em; }
-
-dt {
-  font-weight: bold; }
-
-dd {
-  margin: 0 1.5em 1.5em; }
-
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
-
-figure {
-  margin: 0; }
-
-table {
-  margin: 0 0 1.5em;
-  width: 100%; }
-
-th {
-  font-weight: bold; }
-
 button,
 input,
 select,
@@ -1079,7 +1012,7 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #cccccc #cccccc #bbbbbb;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: #e91f2e;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -1171,11 +1104,11 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #e91f2e; }
   a:visited {
-    color: purple; }
+    color: #c21320; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #c21320; }
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -1222,7 +1155,7 @@ a {
     background-color: black; }
     .main-navigation li a, .main-navigation li a:link {
       display: block;
-      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       line-height: 3rem;
       font-weight: normal;
       color: #a6a6a6;
@@ -1407,7 +1340,7 @@ Content imports
 10.1 Posts and pages
 --------------------------------------------------------------*/
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 3em; }
 
 .byline,
 .updated {
@@ -1425,6 +1358,28 @@ Content imports
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+.entry-meta,
+.entry-footer {
+  color: #aaaaaa;
+  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: .75em;
+  letter-spacing: .03em; }
+  .entry-meta a,
+  .entry-footer a {
+    color: #6a6a6a; }
+
+.entry-footer {
+  border: 3px double rgba(0, 0, 0, 0.05);
+  border-left-width: 0;
+  border-right-width: 0;
+  padding: 1em; }
+
+.more-link {
+  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: capitalize; }
 
 /*--------------------------------------------------------------
 10.2 Asides
@@ -1516,6 +1471,12 @@ object {
 
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
+
+#content {
+  margin-top: 3em;
+  margin-top: 3rem;
+  margin-bottom: 3em;
+  margin-bottom: 3rem; }
 
 .site-footer {
   background-color: #222222;

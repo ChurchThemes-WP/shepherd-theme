@@ -419,36 +419,6 @@ $align-class-breakpoints:
       color: $blockquote-font-color;
     }
 
-    /* Microformats */
-    .vcard {
-      display: inline-block;
-      margin: $microformat-margin;
-      border: $microformat-border-width $microformat-border-style $microformat-border-color;
-      padding: $microformat-padding;
-
-      li {
-        margin: 0;
-        display: block;
-      }
-      .fn {
-        font-weight: $microformat-fullname-font-weight;
-        font-size: $microformat-fullname-font-size;
-      }
-    }
-
-    .vevent {
-      .summary { font-weight: $microformat-summary-font-weight; }
-
-      abbr {
-        cursor: $cursor-default-value;
-        text-decoration: $microformat-abbr-font-decoration;
-        font-weight: $microformat-abbr-font-weight;
-        border: none;
-        padding: $microformat-abbr-padding;
-      }
-    }
-
-
     @media #{$medium-up} {
       h1,h2,h3,h4,h5,h6 { line-height: $header-line-height; }
       h1 { font-size: $h1-font-size; }

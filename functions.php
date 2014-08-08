@@ -105,6 +105,48 @@ function shepherd_scripts() {
 add_action( 'wp_enqueue_scripts', 'shepherd_scripts' );
 
 /**
+ * Returns the Google font stylesheet URL, if available.
+ *
+ * The use of PT Sans and Merriweather by default is localized. For languages
+ * that use characters not supported by the font, the font can be disabled.
+ *
+ * @return string	$fonts_url 	Font stylesheet or empty string if disabled.
+ */
+function shepherd_fonts_url() {
+	$fonts_url = '';
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by PT Sans, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$pt_sans = _x( 'on', 'PT Sans font: on or off', 'shepherd' );
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by Merriweather, translate this to 'off'. Do not translate into your
+	 * own language.
+	 */
+	$poly = _x( 'on', 'Merriweather font: on or off', 'shepherd' );
+
+	if ( 'off' !== $pt_sans || 'off' !== $poly ) {
+		$font_families = array();
+
+		if ( 'off' !== $pt_sans )
+			$font_families[] = 'PT Sans:400,600,700';
+
+		if ( 'off' !== $poly )
+			$font_families[] = 'Merriweather:400,400italic';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+	}
+
+	return $fonts_url;
+}
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';

@@ -18,15 +18,17 @@ $font-weight-bold: bold;
 $font-smoothing: subpixel-antialiased;
 
 // We use these as default colors throughout
-$color-primary: #2ba6cb;
-$secondary-color: #e9e9e9;
+$color-primary: #e91f2e;
+$secondary-color: #000000;
+
+
 $alert-color: #c60f13;
 $success-color: #5da423;
 
 // Backgrounds
 $color-background-screen: #f1f1f1;
 $color-background-hr: #ccc;
-$color-background-button: #e6e6e6;
+$color-background-button: $color-primary;
 $color-background-pre: #eee;
 $color-background-ins: #fff9c0;
 
@@ -34,9 +36,9 @@ $color-background-ins: #fff9c0;
 $color-text-screen: #21759b;
 $color-text-input: #666;
 $color-text-input-focus: #111;
-$color-link: royalblue;
-$color-link-visited: purple;
-$color-link-hover: midnightblue;
+$color-link: $color-primary;
+$color-link-visited: darken($color-primary,10%);
+$color-link-hover: darken($color-primary,10%);
 $color-text-main: #404040;
 
 // Borders
@@ -90,7 +92,8 @@ $column-gutter: rem-calc(30);
 // We use these to control various global styles
 $body-bg: #fff;
 $body-font-color: #222;
-$body-font-family: Georgia, "Times New Roman", serif;
+$body-font-subtle-color: #aaa;
+$body-font-family: Merriweather, Georgia, serif;
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
@@ -164,10 +167,10 @@ $cursor-text-value: text;
 $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-weight: $font-weight-normal;
+$header-font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-weight: bold;
 $header-font-style: bold;
-$header-font-color: #fff;
+$header-font-color: #222;
 $header-line-height: 1.4;
 $header-top-margin: 0;
 $header-bottom-margin: .5rem;
