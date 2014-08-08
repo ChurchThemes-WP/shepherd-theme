@@ -1,4 +1,4 @@
-shepherd_<?php
+<?php
 /**
  * Custom template tags for this theme.
  *
