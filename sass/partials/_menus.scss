@@ -2,11 +2,28 @@ $menu-font-family: Helvetica, Arial, sans-serif !default;
 $menu-background-color: #222 !default;
 $menu-height: 3rem !default;
 
-.main-navigation {
-	box-shadow: 0 2px 0 rgba(0,0,0,0.07);
-	@extend .clearboth;
-	@include clearfix;
+.main-navigation-container{
 	background-color: $menu-background-color;
+	@include clearfix;
+}
+
+.main-navigation {
+
+	.site-title{
+		float: left;
+		font-size: emCalc(18);
+		font-size: rem-calc(18);
+		font-weight: bold;
+		color: contrast-color($menu-background-color, #fff, #000, 50%);
+		margin-bottom: 0;
+		line-height: $menu-height;
+		text-transform: uppercase;
+
+		a{
+			padding: 0 1em;
+			padding: 0 1rem;
+		}
+	}
 
 	ul {
 		font-size: emCalc(13);
@@ -51,6 +68,12 @@ $menu-height: 3rem !default;
 				background-color: contrast-color($menu-background-color,darken($menu-background-color,20%),lighten($menu-background-color,20%),50%);
 				text-decoration: none;
 			}
+		}
+	}
+
+	.sub-menu{
+		a{
+			line-height: $menu-height;
 		}
 	}
 
@@ -117,7 +140,7 @@ $menu-height: 3rem !default;
 				}
 			}
 
-			& .sub-menu .has-sub {
+			.sub-menu .has-sub {
 				> a:after {
 					content:"";
 					display:block;
@@ -132,15 +155,8 @@ $menu-height: 3rem !default;
 				}
 			}
 
-			&.has-sub {
-
-				ul a {
-					line-height:1.2em;
-					color: white;
-
-					&:hover{
-					}
-				}
+			&.has-sub,
+			&.menu-item-has-children {
 
 				&:hover {
 					position:relative;
