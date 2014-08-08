@@ -1,0 +1,23 @@
+$site-footer-background: #222 !default;
+$site-footer-text-color: contrast-color($site-footer-background, darken($site-footer-background,25%),lighten($site-footer-background,25%),50%);
+$site-footer-anchor-color: contrast-color($site-footer-background, darken($site-footer-background,35%),lighten($site-footer-background,35%),50%);
+$site-footer-anchor-color-hover: contrast-color($site-footer-background, darken($site-footer-background,40%),lighten($site-footer-background,40%),50%);
+
+.site-footer{
+	background-color: $site-footer-background;
+	color: $site-footer-text-color;
+	padding: 2em 0;
+	padding: 2rem 0;
+
+	a{
+		color: $site-footer-anchor-color;
+
+		&:hover{
+			color: $site-footer-anchor-color-hover;
+		}
+	}
+}
+
+.site-info{
+	text-align: center;
+}

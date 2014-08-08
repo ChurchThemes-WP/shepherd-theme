@@ -11,3 +11,15 @@
 	@extend .large-3;
 	@extend .columns;
 }
+
+.site-footer{
+	.site-footer-inner{
+		@extend .row;
+	}
+
+	.site-info{
+		@extend .large-12;
+		@extend .large-centered;
+		@extend .columns;
+	}
+}

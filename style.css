@@ -3,8 +3,8 @@ Theme Name: Shepherd Pro
 Theme URI: http://churchthemes.net/themes/shepherd-pro/
 Author: Automattic
 Author URI: http://churchthemes.net/
-Description: Shepherd Pro is the ultimate .
-Version: 1.0-wpcom
+Description: Shepherd Pro is the ultimate theme for pastors and ministry leaders.
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: shepherd
@@ -124,55 +124,64 @@ select {
   width: 100%; }
 
 /* Grid HTML Classes */
-.row, #content {
+.row, #content, .site-footer .site-footer-inner {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
   max-width: 62.5rem; }
-  .row:before, #content:before, .row:after, #content:after {
+  .row:before, #content:before, .site-footer .site-footer-inner:before, .row:after, #content:after, .site-footer .site-footer-inner:after {
     content: " ";
     display: table; }
-  .row:after, #content:after {
+  .row:after, #content:after, .site-footer .site-footer-inner:after {
     clear: both; }
-  .row.collapse .column, .collapse#content .column,
+  .row.collapse .column, .collapse#content .column, .site-footer .collapse.site-footer-inner .column,
   .row.collapse .columns,
   .collapse#content .columns,
+  .site-footer .collapse.site-footer-inner .columns,
   .row.collapse #primary,
   .collapse#content #primary,
+  .site-footer .collapse.site-footer-inner #primary,
   .row.collapse #secondary,
-  .collapse#content #secondary {
+  .collapse#content #secondary,
+  .site-footer .collapse.site-footer-inner #secondary,
+  .row.collapse .site-footer .site-info,
+  .site-footer .row.collapse .site-info,
+  .collapse#content .site-footer .site-info,
+  .site-footer .collapse#content .site-info,
+  .site-footer .collapse.site-footer-inner .site-info {
     position: relative;
     padding-left: 0;
     padding-right: 0;
     float: left; }
-  .row .row, #content .row, .row #content, #content #content {
+  .row .row, #content .row, .site-footer .site-footer-inner .row, .row #content, #content #content, .site-footer .site-footer-inner #content, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, #content .site-footer .site-footer-inner, .site-footer #content .site-footer-inner, .site-footer .site-footer-inner .site-footer-inner {
     width: auto;
     margin-left: -0.9375rem;
     margin-right: -0.9375rem;
     margin-top: 0;
     margin-bottom: 0;
     max-width: none; }
-    .row .row:before, #content .row:before, .row #content:before, #content #content:before, .row .row:after, #content .row:after, .row #content:after, #content #content:after {
+    .row .row:before, #content .row:before, .site-footer .site-footer-inner .row:before, .row #content:before, #content #content:before, .site-footer .site-footer-inner #content:before, .row .site-footer .site-footer-inner:before, .site-footer .row .site-footer-inner:before, #content .site-footer .site-footer-inner:before, .site-footer #content .site-footer-inner:before, .site-footer .site-footer-inner .site-footer-inner:before, .row .row:after, #content .row:after, .site-footer .site-footer-inner .row:after, .row #content:after, #content #content:after, .site-footer .site-footer-inner #content:after, .row .site-footer .site-footer-inner:after, .site-footer .row .site-footer-inner:after, #content .site-footer .site-footer-inner:after, .site-footer #content .site-footer-inner:after, .site-footer .site-footer-inner .site-footer-inner:after {
       content: " ";
       display: table; }
-    .row .row:after, #content .row:after, .row #content:after, #content #content:after {
+    .row .row:after, #content .row:after, .site-footer .site-footer-inner .row:after, .row #content:after, #content #content:after, .site-footer .site-footer-inner #content:after, .row .site-footer .site-footer-inner:after, .site-footer .row .site-footer-inner:after, #content .site-footer .site-footer-inner:after, .site-footer #content .site-footer-inner:after, .site-footer .site-footer-inner .site-footer-inner:after {
       clear: both; }
-    .row .row.collapse, #content .row.collapse, .row .collapse#content, #content .collapse#content {
+    .row .row.collapse, #content .row.collapse, .site-footer .site-footer-inner .row.collapse, .row .collapse#content, #content .collapse#content, .site-footer .site-footer-inner .collapse#content, .row .site-footer .collapse.site-footer-inner, .site-footer .row .collapse.site-footer-inner, #content .site-footer .collapse.site-footer-inner, .site-footer #content .collapse.site-footer-inner, .site-footer .site-footer-inner .collapse.site-footer-inner {
       width: auto;
       margin: 0;
       max-width: none; }
-      .row .row.collapse:before, #content .row.collapse:before, .row .collapse#content:before, #content .collapse#content:before, .row .row.collapse:after, #content .row.collapse:after, .row .collapse#content:after, #content .collapse#content:after {
+      .row .row.collapse:before, #content .row.collapse:before, .site-footer .site-footer-inner .row.collapse:before, .row .collapse#content:before, #content .collapse#content:before, .site-footer .site-footer-inner .collapse#content:before, .row .site-footer .collapse.site-footer-inner:before, .site-footer .row .collapse.site-footer-inner:before, #content .site-footer .collapse.site-footer-inner:before, .site-footer #content .collapse.site-footer-inner:before, .site-footer .site-footer-inner .collapse.site-footer-inner:before, .row .row.collapse:after, #content .row.collapse:after, .site-footer .site-footer-inner .row.collapse:after, .row .collapse#content:after, #content .collapse#content:after, .site-footer .site-footer-inner .collapse#content:after, .row .site-footer .collapse.site-footer-inner:after, .site-footer .row .collapse.site-footer-inner:after, #content .site-footer .collapse.site-footer-inner:after, .site-footer #content .collapse.site-footer-inner:after, .site-footer .site-footer-inner .collapse.site-footer-inner:after {
         content: " ";
         display: table; }
-      .row .row.collapse:after, #content .row.collapse:after, .row .collapse#content:after, #content .collapse#content:after {
+      .row .row.collapse:after, #content .row.collapse:after, .site-footer .site-footer-inner .row.collapse:after, .row .collapse#content:after, #content .collapse#content:after, .site-footer .site-footer-inner .collapse#content:after, .row .site-footer .collapse.site-footer-inner:after, .site-footer .row .collapse.site-footer-inner:after, #content .site-footer .collapse.site-footer-inner:after, .site-footer #content .collapse.site-footer-inner:after, .site-footer .site-footer-inner .collapse.site-footer-inner:after {
         clear: both; }
 
 .column,
 .columns,
 #primary,
-#secondary {
+#secondary,
+.site-footer .site-info {
   position: relative;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -183,7 +192,8 @@ select {
   .column,
   .columns,
   #primary,
-  #secondary {
+  #secondary,
+  .site-footer .site-info {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -290,7 +300,8 @@ select {
   .column.small-centered,
   .columns.small-centered,
   .small-centered#primary,
-  .small-centered#secondary {
+  .small-centered#secondary,
+  .site-footer .small-centered.site-info {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -341,55 +352,55 @@ select {
     position: relative;
     width: 91.66667%; }
 
-  .large-12 {
+  .large-12, .site-footer .site-info {
     position: relative;
     width: 100%; }
 
-  .row .large-offset-0, #content .large-offset-0 {
+  .row .large-offset-0, #content .large-offset-0, .site-footer .site-footer-inner .large-offset-0 {
     position: relative;
     margin-left: 0%; }
 
-  .row .large-offset-1, #content .large-offset-1 {
+  .row .large-offset-1, #content .large-offset-1, .site-footer .site-footer-inner .large-offset-1 {
     position: relative;
     margin-left: 8.33333%; }
 
-  .row .large-offset-2, #content .large-offset-2 {
+  .row .large-offset-2, #content .large-offset-2, .site-footer .site-footer-inner .large-offset-2 {
     position: relative;
     margin-left: 16.66667%; }
 
-  .row .large-offset-3, #content .large-offset-3 {
+  .row .large-offset-3, #content .large-offset-3, .site-footer .site-footer-inner .large-offset-3 {
     position: relative;
     margin-left: 25%; }
 
-  .row .large-offset-4, #content .large-offset-4 {
+  .row .large-offset-4, #content .large-offset-4, .site-footer .site-footer-inner .large-offset-4 {
     position: relative;
     margin-left: 33.33333%; }
 
-  .row .large-offset-5, #content .large-offset-5 {
+  .row .large-offset-5, #content .large-offset-5, .site-footer .site-footer-inner .large-offset-5 {
     position: relative;
     margin-left: 41.66667%; }
 
-  .row .large-offset-6, #content .large-offset-6 {
+  .row .large-offset-6, #content .large-offset-6, .site-footer .site-footer-inner .large-offset-6 {
     position: relative;
     margin-left: 50%; }
 
-  .row .large-offset-7, #content .large-offset-7 {
+  .row .large-offset-7, #content .large-offset-7, .site-footer .site-footer-inner .large-offset-7 {
     position: relative;
     margin-left: 58.33333%; }
 
-  .row .large-offset-8, #content .large-offset-8 {
+  .row .large-offset-8, #content .large-offset-8, .site-footer .site-footer-inner .large-offset-8 {
     position: relative;
     margin-left: 66.66667%; }
 
-  .row .large-offset-9, #content .large-offset-9 {
+  .row .large-offset-9, #content .large-offset-9, .site-footer .site-footer-inner .large-offset-9 {
     position: relative;
     margin-left: 75%; }
 
-  .row .large-offset-10, #content .large-offset-10 {
+  .row .large-offset-10, #content .large-offset-10, .site-footer .site-footer-inner .large-offset-10 {
     position: relative;
     margin-left: 83.33333%; }
 
-  .row .large-offset-11, #content .large-offset-11 {
+  .row .large-offset-11, #content .large-offset-11, .site-footer .site-footer-inner .large-offset-11 {
     position: relative;
     margin-left: 91.66667%; }
 
@@ -503,10 +514,13 @@ select {
     right: 91.66667%;
     left: auto; }
 
-  .column.large-centered,
+  .column.large-centered, .site-footer .column.site-info,
   .columns.large-centered,
   .large-centered#primary,
-  .large-centered#secondary {
+  .site-footer #primary.site-info,
+  .large-centered#secondary,
+  .site-footer #secondary.site-info,
+  .site-footer .site-info {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -515,7 +529,8 @@ select {
   .column.large-uncentered,
   .columns.large-uncentered,
   .large-uncentered#primary,
-  .large-uncentered#secondary {
+  .large-uncentered#secondary,
+  .site-footer .large-uncentered.site-info {
     margin-left: 0;
     margin-right: 0;
     float: left !important; }
@@ -523,7 +538,8 @@ select {
   .column.large-uncentered.opposite,
   .columns.large-uncentered.opposite,
   .large-uncentered.opposite#primary,
-  .large-uncentered.opposite#secondary {
+  .large-uncentered.opposite#secondary,
+  .site-footer .large-uncentered.opposite.site-info {
     float: right !important; } }
 .text-left {
   text-align: left !important; }
@@ -1463,3 +1479,16 @@ object {
 
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
+
+.site-footer {
+  background-color: #222222;
+  color: #626262;
+  padding: 2em 0;
+  padding: 2rem 0; }
+  .site-footer a {
+    color: #7b7b7b; }
+    .site-footer a:hover {
+      color: #888888; }
+
+.site-info {
+  text-align: center; }

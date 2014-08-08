@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shepherd-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-08 08:45-0500\n"
+"POT-Creation-Date: 2014-08-08 08:56-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,16 +219,16 @@ msgstr ""
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: footer.php:15
+#: footer.php:16
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: footer.php:15
+#: footer.php:16
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:17
+#: footer.php:18
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
