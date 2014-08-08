@@ -15,6 +15,15 @@ module.exports = function(grunt) {
 			all: ['js/**/*.js', 'Gruntfile.js']
 		},
 
+		autoprefixer: {
+			options: {
+				// Task-specific options go here.
+			},
+			your_target: {
+                src: '*.css'
+			},
+		},
+
 		pot: {
 				options:{
 					text_domain: 'shepherd', //Your text domain. Produces my-text-domain.pot

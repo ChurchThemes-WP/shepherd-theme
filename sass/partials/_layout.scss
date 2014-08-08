@@ -1,0 +1,13 @@
+#content{
+	@extend .row;
+}
+
+#primary{
+	@extend .large-9;
+	@extend .columns;
+}
+
+#secondary{
+	@extend .large-3;
+	@extend .columns;
+}

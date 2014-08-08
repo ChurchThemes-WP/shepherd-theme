@@ -5,16 +5,10 @@
 $text-direction: rtl;
 
 @import "variables/variables";
-@import "mixins/mixins";
-@import "partials/reset";
-@import "partials/typography";
-@import "partials/elements";
-@import "partials/forms";
-@import "partials/navigation";
-@import "partials/accessibility";
+@import "mixins/functions";
+@import "mixins/global";
+@import "mixins/grid";
+@import "mixins/color-contrast";
+
 @import "partials/alignments";
-@import "partials/clearings";
-@import "partials/widgets";
-@import "partials/content";
-@import "partials/infinite-scroll";
-@import "partials/media";
+@import "partials/layout";
