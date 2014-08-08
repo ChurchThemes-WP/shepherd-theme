@@ -8,7 +8,7 @@ select,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	@include font-size(16);
+	font-size: rem-calc(16);
 	line-height: $font__line-height-body;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -32,7 +32,7 @@ address {
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
-	@include font-size(15);
+	font-size: rem-calc(15);
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -40,7 +40,7 @@ pre {
 	padding: 1.6em;
 }
 code, kbd, tt, var {
-	@include font-size(15);
+	font-size: rem-calc(15);
 	font-family: $font__code;
 }
 abbr, acronym {
