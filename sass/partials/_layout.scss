@@ -12,6 +12,15 @@
 	@extend .columns;
 }
 
+.site-branding-container{
+	@extend .row;
+}
+
+.site-branding{
+	@extend .large-12;
+	@extend .columns;
+}
+
 .site-footer{
 	.site-footer-inner{
 		@extend .row;

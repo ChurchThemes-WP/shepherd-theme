@@ -68,7 +68,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: normal;
   font-style: normal;
   line-height: 150%;
@@ -124,63 +124,73 @@ select {
   width: 100%; }
 
 /* Grid HTML Classes */
-.row, #content, .site-footer .site-footer-inner {
+.row, #content, .site-branding-container, .site-footer .site-footer-inner {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
   max-width: 62.5rem; }
-  .row:before, #content:before, .site-footer .site-footer-inner:before, .row:after, #content:after, .site-footer .site-footer-inner:after {
+  .row:before, #content:before, .site-branding-container:before, .site-footer .site-footer-inner:before, .row:after, #content:after, .site-branding-container:after, .site-footer .site-footer-inner:after {
     content: " ";
     display: table; }
-  .row:after, #content:after, .site-footer .site-footer-inner:after {
+  .row:after, #content:after, .site-branding-container:after, .site-footer .site-footer-inner:after {
     clear: both; }
-  .row.collapse .column, .collapse#content .column, .site-footer .collapse.site-footer-inner .column,
+  .row.collapse .column, .collapse#content .column, .collapse.site-branding-container .column, .site-footer .collapse.site-footer-inner .column,
   .row.collapse .columns,
   .collapse#content .columns,
+  .collapse.site-branding-container .columns,
   .site-footer .collapse.site-footer-inner .columns,
   .row.collapse #primary,
   .collapse#content #primary,
+  .collapse.site-branding-container #primary,
   .site-footer .collapse.site-footer-inner #primary,
   .row.collapse #secondary,
   .collapse#content #secondary,
+  .collapse.site-branding-container #secondary,
   .site-footer .collapse.site-footer-inner #secondary,
+  .row.collapse .site-branding,
+  .collapse#content .site-branding,
+  .collapse.site-branding-container .site-branding,
+  .site-footer .collapse.site-footer-inner .site-branding,
   .row.collapse .site-footer .site-info,
   .site-footer .row.collapse .site-info,
   .collapse#content .site-footer .site-info,
   .site-footer .collapse#content .site-info,
+  .collapse.site-branding-container .site-footer .site-info,
+  .site-footer .collapse.site-branding-container .site-info,
   .site-footer .collapse.site-footer-inner .site-info {
     position: relative;
     padding-left: 0;
     padding-right: 0;
     float: left; }
-  .row .row, #content .row, .site-footer .site-footer-inner .row, .row #content, #content #content, .site-footer .site-footer-inner #content, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, #content .site-footer .site-footer-inner, .site-footer #content .site-footer-inner, .site-footer .site-footer-inner .site-footer-inner {
+  .row .row, #content .row, .site-branding-container .row, .site-footer .site-footer-inner .row, .row #content, #content #content, .site-branding-container #content, .site-footer .site-footer-inner #content, .row .site-branding-container, #content .site-branding-container, .site-branding-container .site-branding-container, .site-footer .site-footer-inner .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, #content .site-footer .site-footer-inner, .site-footer #content .site-footer-inner, .site-branding-container .site-footer .site-footer-inner, .site-footer .site-branding-container .site-footer-inner, .site-footer .site-footer-inner .site-footer-inner {
     width: auto;
     margin-left: -0.9375rem;
     margin-right: -0.9375rem;
     margin-top: 0;
     margin-bottom: 0;
     max-width: none; }
-    .row .row:before, #content .row:before, .site-footer .site-footer-inner .row:before, .row #content:before, #content #content:before, .site-footer .site-footer-inner #content:before, .row .site-footer .site-footer-inner:before, .site-footer .row .site-footer-inner:before, #content .site-footer .site-footer-inner:before, .site-footer #content .site-footer-inner:before, .site-footer .site-footer-inner .site-footer-inner:before, .row .row:after, #content .row:after, .site-footer .site-footer-inner .row:after, .row #content:after, #content #content:after, .site-footer .site-footer-inner #content:after, .row .site-footer .site-footer-inner:after, .site-footer .row .site-footer-inner:after, #content .site-footer .site-footer-inner:after, .site-footer #content .site-footer-inner:after, .site-footer .site-footer-inner .site-footer-inner:after {
+    .row .row:before, #content .row:before, .site-branding-container .row:before, .site-footer .site-footer-inner .row:before, .row #content:before, #content #content:before, .site-branding-container #content:before, .site-footer .site-footer-inner #content:before, .row .site-branding-container:before, #content .site-branding-container:before, .site-branding-container .site-branding-container:before, .site-footer .site-footer-inner .site-branding-container:before, .row .site-footer .site-footer-inner:before, .site-footer .row .site-footer-inner:before, #content .site-footer .site-footer-inner:before, .site-footer #content .site-footer-inner:before, .site-branding-container .site-footer .site-footer-inner:before, .site-footer .site-branding-container .site-footer-inner:before, .site-footer .site-footer-inner .site-footer-inner:before, .row .row:after, #content .row:after, .site-branding-container .row:after, .site-footer .site-footer-inner .row:after, .row #content:after, #content #content:after, .site-branding-container #content:after, .site-footer .site-footer-inner #content:after, .row .site-branding-container:after, #content .site-branding-container:after, .site-branding-container .site-branding-container:after, .site-footer .site-footer-inner .site-branding-container:after, .row .site-footer .site-footer-inner:after, .site-footer .row .site-footer-inner:after, #content .site-footer .site-footer-inner:after, .site-footer #content .site-footer-inner:after, .site-branding-container .site-footer .site-footer-inner:after, .site-footer .site-branding-container .site-footer-inner:after, .site-footer .site-footer-inner .site-footer-inner:after {
       content: " ";
       display: table; }
-    .row .row:after, #content .row:after, .site-footer .site-footer-inner .row:after, .row #content:after, #content #content:after, .site-footer .site-footer-inner #content:after, .row .site-footer .site-footer-inner:after, .site-footer .row .site-footer-inner:after, #content .site-footer .site-footer-inner:after, .site-footer #content .site-footer-inner:after, .site-footer .site-footer-inner .site-footer-inner:after {
+    .row .row:after, #content .row:after, .site-branding-container .row:after, .site-footer .site-footer-inner .row:after, .row #content:after, #content #content:after, .site-branding-container #content:after, .site-footer .site-footer-inner #content:after, .row .site-branding-container:after, #content .site-branding-container:after, .site-branding-container .site-branding-container:after, .site-footer .site-footer-inner .site-branding-container:after, .row .site-footer .site-footer-inner:after, .site-footer .row .site-footer-inner:after, #content .site-footer .site-footer-inner:after, .site-footer #content .site-footer-inner:after, .site-branding-container .site-footer .site-footer-inner:after, .site-footer .site-branding-container .site-footer-inner:after, .site-footer .site-footer-inner .site-footer-inner:after {
       clear: both; }
-    .row .row.collapse, #content .row.collapse, .site-footer .site-footer-inner .row.collapse, .row .collapse#content, #content .collapse#content, .site-footer .site-footer-inner .collapse#content, .row .site-footer .collapse.site-footer-inner, .site-footer .row .collapse.site-footer-inner, #content .site-footer .collapse.site-footer-inner, .site-footer #content .collapse.site-footer-inner, .site-footer .site-footer-inner .collapse.site-footer-inner {
+    .row .row.collapse, #content .row.collapse, .site-branding-container .row.collapse, .site-footer .site-footer-inner .row.collapse, .row .collapse#content, #content .collapse#content, .site-branding-container .collapse#content, .site-footer .site-footer-inner .collapse#content, .row .collapse.site-branding-container, #content .collapse.site-branding-container, .site-branding-container .collapse.site-branding-container, .site-footer .site-footer-inner .collapse.site-branding-container, .row .site-footer .collapse.site-footer-inner, .site-footer .row .collapse.site-footer-inner, #content .site-footer .collapse.site-footer-inner, .site-footer #content .collapse.site-footer-inner, .site-branding-container .site-footer .collapse.site-footer-inner, .site-footer .site-branding-container .collapse.site-footer-inner, .site-footer .site-footer-inner .collapse.site-footer-inner {
       width: auto;
       margin: 0;
       max-width: none; }
-      .row .row.collapse:before, #content .row.collapse:before, .site-footer .site-footer-inner .row.collapse:before, .row .collapse#content:before, #content .collapse#content:before, .site-footer .site-footer-inner .collapse#content:before, .row .site-footer .collapse.site-footer-inner:before, .site-footer .row .collapse.site-footer-inner:before, #content .site-footer .collapse.site-footer-inner:before, .site-footer #content .collapse.site-footer-inner:before, .site-footer .site-footer-inner .collapse.site-footer-inner:before, .row .row.collapse:after, #content .row.collapse:after, .site-footer .site-footer-inner .row.collapse:after, .row .collapse#content:after, #content .collapse#content:after, .site-footer .site-footer-inner .collapse#content:after, .row .site-footer .collapse.site-footer-inner:after, .site-footer .row .collapse.site-footer-inner:after, #content .site-footer .collapse.site-footer-inner:after, .site-footer #content .collapse.site-footer-inner:after, .site-footer .site-footer-inner .collapse.site-footer-inner:after {
+      .row .row.collapse:before, #content .row.collapse:before, .site-branding-container .row.collapse:before, .site-footer .site-footer-inner .row.collapse:before, .row .collapse#content:before, #content .collapse#content:before, .site-branding-container .collapse#content:before, .site-footer .site-footer-inner .collapse#content:before, .row .collapse.site-branding-container:before, #content .collapse.site-branding-container:before, .site-branding-container .collapse.site-branding-container:before, .site-footer .site-footer-inner .collapse.site-branding-container:before, .row .site-footer .collapse.site-footer-inner:before, .site-footer .row .collapse.site-footer-inner:before, #content .site-footer .collapse.site-footer-inner:before, .site-footer #content .collapse.site-footer-inner:before, .site-branding-container .site-footer .collapse.site-footer-inner:before, .site-footer .site-branding-container .collapse.site-footer-inner:before, .site-footer .site-footer-inner .collapse.site-footer-inner:before, .row .row.collapse:after, #content .row.collapse:after, .site-branding-container .row.collapse:after, .site-footer .site-footer-inner .row.collapse:after, .row .collapse#content:after, #content .collapse#content:after, .site-branding-container .collapse#content:after, .site-footer .site-footer-inner .collapse#content:after, .row .collapse.site-branding-container:after, #content .collapse.site-branding-container:after, .site-branding-container .collapse.site-branding-container:after, .site-footer .site-footer-inner .collapse.site-branding-container:after, .row .site-footer .collapse.site-footer-inner:after, .site-footer .row .collapse.site-footer-inner:after, #content .site-footer .collapse.site-footer-inner:after, .site-footer #content .collapse.site-footer-inner:after, .site-branding-container .site-footer .collapse.site-footer-inner:after, .site-footer .site-branding-container .collapse.site-footer-inner:after, .site-footer .site-footer-inner .collapse.site-footer-inner:after {
         content: " ";
         display: table; }
-      .row .row.collapse:after, #content .row.collapse:after, .site-footer .site-footer-inner .row.collapse:after, .row .collapse#content:after, #content .collapse#content:after, .site-footer .site-footer-inner .collapse#content:after, .row .site-footer .collapse.site-footer-inner:after, .site-footer .row .collapse.site-footer-inner:after, #content .site-footer .collapse.site-footer-inner:after, .site-footer #content .collapse.site-footer-inner:after, .site-footer .site-footer-inner .collapse.site-footer-inner:after {
+      .row .row.collapse:after, #content .row.collapse:after, .site-branding-container .row.collapse:after, .site-footer .site-footer-inner .row.collapse:after, .row .collapse#content:after, #content .collapse#content:after, .site-branding-container .collapse#content:after, .site-footer .site-footer-inner .collapse#content:after, .row .collapse.site-branding-container:after, #content .collapse.site-branding-container:after, .site-branding-container .collapse.site-branding-container:after, .site-footer .site-footer-inner .collapse.site-branding-container:after, .row .site-footer .collapse.site-footer-inner:after, .site-footer .row .collapse.site-footer-inner:after, #content .site-footer .collapse.site-footer-inner:after, .site-footer #content .collapse.site-footer-inner:after, .site-branding-container .site-footer .collapse.site-footer-inner:after, .site-footer .site-branding-container .collapse.site-footer-inner:after, .site-footer .site-footer-inner .collapse.site-footer-inner:after {
         clear: both; }
 
 .column,
 .columns,
 #primary,
 #secondary,
+.site-branding,
 .site-footer .site-info {
   position: relative;
   padding-left: 0.9375rem;
@@ -193,6 +203,7 @@ select {
   .columns,
   #primary,
   #secondary,
+  .site-branding,
   .site-footer .site-info {
     position: relative;
     padding-left: 0.9375rem;
@@ -301,6 +312,7 @@ select {
   .columns.small-centered,
   .small-centered#primary,
   .small-centered#secondary,
+  .small-centered.site-branding,
   .site-footer .small-centered.site-info {
     position: relative;
     margin-left: auto;
@@ -352,55 +364,55 @@ select {
     position: relative;
     width: 91.66667%; }
 
-  .large-12, .site-footer .site-info {
+  .large-12, .site-branding, .site-footer .site-info {
     position: relative;
     width: 100%; }
 
-  .row .large-offset-0, #content .large-offset-0, .site-footer .site-footer-inner .large-offset-0 {
+  .row .large-offset-0, #content .large-offset-0, .site-branding-container .large-offset-0, .site-footer .site-footer-inner .large-offset-0 {
     position: relative;
     margin-left: 0%; }
 
-  .row .large-offset-1, #content .large-offset-1, .site-footer .site-footer-inner .large-offset-1 {
+  .row .large-offset-1, #content .large-offset-1, .site-branding-container .large-offset-1, .site-footer .site-footer-inner .large-offset-1 {
     position: relative;
     margin-left: 8.33333%; }
 
-  .row .large-offset-2, #content .large-offset-2, .site-footer .site-footer-inner .large-offset-2 {
+  .row .large-offset-2, #content .large-offset-2, .site-branding-container .large-offset-2, .site-footer .site-footer-inner .large-offset-2 {
     position: relative;
     margin-left: 16.66667%; }
 
-  .row .large-offset-3, #content .large-offset-3, .site-footer .site-footer-inner .large-offset-3 {
+  .row .large-offset-3, #content .large-offset-3, .site-branding-container .large-offset-3, .site-footer .site-footer-inner .large-offset-3 {
     position: relative;
     margin-left: 25%; }
 
-  .row .large-offset-4, #content .large-offset-4, .site-footer .site-footer-inner .large-offset-4 {
+  .row .large-offset-4, #content .large-offset-4, .site-branding-container .large-offset-4, .site-footer .site-footer-inner .large-offset-4 {
     position: relative;
     margin-left: 33.33333%; }
 
-  .row .large-offset-5, #content .large-offset-5, .site-footer .site-footer-inner .large-offset-5 {
+  .row .large-offset-5, #content .large-offset-5, .site-branding-container .large-offset-5, .site-footer .site-footer-inner .large-offset-5 {
     position: relative;
     margin-left: 41.66667%; }
 
-  .row .large-offset-6, #content .large-offset-6, .site-footer .site-footer-inner .large-offset-6 {
+  .row .large-offset-6, #content .large-offset-6, .site-branding-container .large-offset-6, .site-footer .site-footer-inner .large-offset-6 {
     position: relative;
     margin-left: 50%; }
 
-  .row .large-offset-7, #content .large-offset-7, .site-footer .site-footer-inner .large-offset-7 {
+  .row .large-offset-7, #content .large-offset-7, .site-branding-container .large-offset-7, .site-footer .site-footer-inner .large-offset-7 {
     position: relative;
     margin-left: 58.33333%; }
 
-  .row .large-offset-8, #content .large-offset-8, .site-footer .site-footer-inner .large-offset-8 {
+  .row .large-offset-8, #content .large-offset-8, .site-branding-container .large-offset-8, .site-footer .site-footer-inner .large-offset-8 {
     position: relative;
     margin-left: 66.66667%; }
 
-  .row .large-offset-9, #content .large-offset-9, .site-footer .site-footer-inner .large-offset-9 {
+  .row .large-offset-9, #content .large-offset-9, .site-branding-container .large-offset-9, .site-footer .site-footer-inner .large-offset-9 {
     position: relative;
     margin-left: 75%; }
 
-  .row .large-offset-10, #content .large-offset-10, .site-footer .site-footer-inner .large-offset-10 {
+  .row .large-offset-10, #content .large-offset-10, .site-branding-container .large-offset-10, .site-footer .site-footer-inner .large-offset-10 {
     position: relative;
     margin-left: 83.33333%; }
 
-  .row .large-offset-11, #content .large-offset-11, .site-footer .site-footer-inner .large-offset-11 {
+  .row .large-offset-11, #content .large-offset-11, .site-branding-container .large-offset-11, .site-footer .site-footer-inner .large-offset-11 {
     position: relative;
     margin-left: 91.66667%; }
 
@@ -520,6 +532,7 @@ select {
   .site-footer #primary.site-info,
   .large-centered#secondary,
   .site-footer #secondary.site-info,
+  .large-centered.site-branding,
   .site-footer .site-info {
     position: relative;
     margin-left: auto;
@@ -530,6 +543,7 @@ select {
   .columns.large-uncentered,
   .large-uncentered#primary,
   .large-uncentered#secondary,
+  .large-uncentered.site-branding,
   .site-footer .large-uncentered.site-info {
     margin-left: 0;
     margin-right: 0;
@@ -539,6 +553,7 @@ select {
   .columns.large-uncentered.opposite,
   .large-uncentered.opposite#primary,
   .large-uncentered.opposite#secondary,
+  .large-uncentered.opposite.site-branding,
   .site-footer .large-uncentered.opposite.site-info {
     float: right !important; } }
 .text-left {
@@ -727,14 +742,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: bold;
-  color: #222222;
+  color: white;
   text-rendering: optimizeLegibility;
-  margin-top: 0.2rem;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
-    color: #6f6f6f;
+    color: white;
     line-height: 0; }
 
 h1 {
@@ -757,9 +772,9 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: white;
   font-weight: normal;
-  margin-top: 0.2rem;
+  margin-top: 0;
   margin-bottom: 0.5rem; }
 
 hr {
@@ -868,17 +883,17 @@ blockquote {
   blockquote cite {
     display: block;
     font-size: 0.8125rem;
-    color: #555555; }
+    color: white; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a,
     blockquote cite a:visited {
-      color: #555555; }
+      color: white; }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f; }
+  color: white; }
 
 /* Microformats */
 .vcard {
@@ -1161,20 +1176,23 @@ a {
 --------------------------------------------------------------*/
 .main-navigation {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
-  background-color: #222222; }
+  background-color: black; }
   .main-navigation:before, .main-navigation:after {
     content: " ";
     display: table; }
   .main-navigation:after {
     clear: both; }
   .main-navigation ul {
-    font-size: .75em;
-    font-size: .75rem;
+    font-size: 0.8125rem;
+    font-size: 0.8125rem;
     position: relative;
     display: block;
     z-index: 1;
     margin: 0;
     padding: 0; }
+  .main-navigation a,
+  .main-navigation a:link {
+    color: white; }
   .main-navigation li {
     display: block;
     float: none;
@@ -1182,19 +1200,21 @@ a {
     padding: 0;
     list-style: none;
     text-align: center; }
-  .main-navigation a {
-    background-color: #222222; }
-    .main-navigation a, .main-navigation a:link {
-      display: block;
-      font-family: Helvetica, Arial, sans-serif;
-      color: white;
-      font-weight: normal;
-      padding: .6em 1.2em;
-      padding: .6rem 1.2rem;
-      position: relative; }
-    .main-navigation a:hover {
-      background-color: #3c3c3c;
-      text-decoration: none; }
+    .main-navigation li a {
+      background-color: black; }
+      .main-navigation li a, .main-navigation li a:link {
+        display: block;
+        font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        line-height: 3rem;
+        font-weight: normal;
+        color: #a6a6a6;
+        padding: 0 .6em;
+        padding: 0 .6rem;
+        position: relative;
+        text-transform: uppercase; }
+      .main-navigation li a:hover {
+        background-color: #333333;
+        text-decoration: none; }
   @media all and (min-width: 480px) {
     .main-navigation {
       clear: both; }
@@ -1218,7 +1238,7 @@ a {
         position: relative; }
         .main-navigation li.current-menu-item a {
           color: white;
-          background-color: #222222; }
+          background-color: black; }
           .main-navigation li.current-menu-item a:after {
             border-color: white; }
         .main-navigation li.current-menu-item.has-sub > a:after {
@@ -1252,7 +1272,7 @@ a {
           position: relative; }
           .main-navigation li.has-sub:hover > ul {
             display: block;
-            background-color: #222222;
+            background-color: black;
             width: 250px; }
             .main-navigation li.has-sub:hover > ul ul {
               left: 100%;
@@ -1479,6 +1499,18 @@ object {
 
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
+
+.site-title {
+  float: left;
+  font-size: 1.4em;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0;
+  line-height: 3rem; }
+  .site-title a {
+    padding: 0 1em;
+    padding: 0 1rem; }
 
 .site-footer {
   background-color: #222222;

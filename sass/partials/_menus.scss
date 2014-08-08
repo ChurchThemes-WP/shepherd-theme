@@ -1,5 +1,6 @@
 $menu-font-family: Helvetica, Arial, sans-serif !default;
 $menu-background-color: #222 !default;
+$menu-height: 3rem !default;
 
 .main-navigation {
 	box-shadow: 0 2px 0 rgba(0,0,0,0.07);
@@ -8,13 +9,18 @@ $menu-background-color: #222 !default;
 	background-color: $menu-background-color;
 
 	ul {
-		font-size: .75em;
-		font-size: .75rem;
+		font-size: emCalc(13);
+		font-size: rem-calc(13);
 		position:relative;
 		display: block;
 		z-index:1;
 		margin: 0;
 		padding: 0;
+	}
+
+	a,
+	a:link{
+		color: contrast-color($menu-background-color, #000, #fff, 50%);
 	}
 
 	li {
@@ -24,25 +30,27 @@ $menu-background-color: #222 !default;
 		padding: 0;
 		list-style: none;
 		text-align: center;
-	}
 
-	a {
-		background-color: $menu-background-color;
+		a {
+			background-color: $menu-background-color;
 
-		&,
-		&:link{
-			display: block;
-			font-family: $menu-font-family;
-			color: white;
-			font-weight: normal;
-			padding: .6em 1.2em;
-			padding: .6rem 1.2rem;
-			position: relative;
-		}
+			&,
+			&:link{
+				display: block;
+				font-family: $menu-font-family;
+				line-height: $menu-height;
+				font-weight: normal;
+				color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);
+				padding: 0 .6em;
+				padding: 0 .6rem;
+				position: relative;
+				text-transform: uppercase;
+			}
 
-		&:hover {
-			background-color: contrast-color($menu-background-color,darken($menu-background-color,10%),lighten($menu-background-color,10%),50%);
-			text-decoration: none;
+			&:hover {
+				background-color: contrast-color($menu-background-color,darken($menu-background-color,20%),lighten($menu-background-color,20%),50%);
+				text-decoration: none;
+			}
 		}
 	}
 
