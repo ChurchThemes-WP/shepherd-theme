@@ -32,7 +32,7 @@
 			</nav><!-- #site-navigation -->
 		</div>
 
-		<?php do_action('header-area'); ?>
+		<?php do_action( 'shepherd_header' ); ?>
 
 	</header><!-- #masthead -->
 

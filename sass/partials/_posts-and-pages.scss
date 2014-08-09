@@ -26,6 +26,12 @@
 	margin: 0 0 1.5em;
 }
 
+.entry-title{
+	a{
+		color: $body-font-color;
+	}
+}
+
 .entry-meta,
 .entry-footer{
 	color: $body-font-subtle-color;

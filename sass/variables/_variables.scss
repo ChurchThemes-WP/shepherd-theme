@@ -5,7 +5,7 @@
 Variables
 --------------------------------------------------------------*/
 
-$body-bg: #fff;
+$body-bg: blue;
 $body-font-color: #222;
 $body-font-weight: normal;
 $body-font-style: normal;
@@ -18,17 +18,21 @@ $font-weight-bold: bold;
 $font-smoothing: subpixel-antialiased;
 
 // We use these as default colors throughout
-$color-primary: #e91f2e;
+$primary-color: #e91f2e;
 $secondary-color: #000000;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
 
-
+$menu-background-color: #000;
 $alert-color: #c60f13;
 $success-color: #5da423;
 
 // Backgrounds
 $color-background-screen: #f1f1f1;
 $color-background-hr: #ccc;
-$color-background-button: $color-primary;
+$color-background-button: $primary-color;
 $color-background-pre: #eee;
 $color-background-ins: #fff9c0;
 
@@ -36,9 +40,10 @@ $color-background-ins: #fff9c0;
 $color-text-screen: #21759b;
 $color-text-input: #666;
 $color-text-input-focus: #111;
-$color-link: $color-primary;
-$color-link-visited: darken($color-primary,10%);
-$color-link-hover: darken($color-primary,10%);
+$color-text-input-background: #eee;
+$color-link: $primary-color;
+$color-link-visited: darken($primary-color,10%);
+$color-link-hover: darken($primary-color,10%);
 $color-text-main: #404040;
 
 // Borders
@@ -87,7 +92,7 @@ $include-xl-html-grid-classes: false;
 
 $row-width: rem-calc(1000);
 $total-columns: 12;
-$column-gutter: rem-calc(30);
+$column-gutter: rem-calc(40);
 
 // We use these to control various global styles
 $body-bg: #fff;
@@ -100,16 +105,6 @@ $body-font-style: normal;
 
 // We use this to control font-smoothing
 $font-smoothing: antialiased;
-
-// We use these as default colors throughout
-$primary-color: #008CBA;
-$secondary-color: #e7e7e7;
-$alert-color: #f04124;
-$success-color: #43AC6A;
-$warning-color: #f08a24;
-$info-color: #a0d3e8;
-
-$menu-background-color: #000;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 3px;
@@ -215,10 +210,10 @@ $paragraph-aside-font-style: italic;
 $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
-$code-color: #333;
+$code-color: #aaa;
 $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $code-font-weight: $font-weight-normal;
-$code-background-color: scale-color($secondary-color, $lightness: 70%);
+$code-background-color: scale-color($secondary-color, $lightness: 90%);
 $code-border-size: 1px;
 $code-border-style: solid;
 $code-border-color: scale-color($code-background-color, $lightness: -10%);

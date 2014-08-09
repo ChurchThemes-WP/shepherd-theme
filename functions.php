@@ -38,7 +38,7 @@ function shepherd_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -66,6 +66,13 @@ function shepherd_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Add support for Jetpack featured content
+	add_theme_support( 'featured-content', array(
+		'filter'     => 'shepherd_get_featured_posts',
+		'max_posts'  => 1,
+		'post_types' => array( 'post', 'page' ),
+	) );
 }
 endif; // shepherd_setup
 add_action( 'after_setup_theme', 'shepherd_setup' );
@@ -145,6 +152,15 @@ function shepherd_fonts_url() {
 
 	return $fonts_url;
 }
+
+/**
+ * Define a custom excerpt length.
+ */
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /**
  * Implement the Custom Header feature.

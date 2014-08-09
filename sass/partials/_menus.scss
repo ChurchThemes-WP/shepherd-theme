@@ -1,6 +1,6 @@
 $menu-font-family: Helvetica, Arial, sans-serif !default;
 $menu-background-color: #222 !default;
-$menu-height: 3rem !default;
+$menu-height: 3.5rem !default;
 
 .main-navigation-container{
 	background-color: $menu-background-color;
@@ -11,8 +11,8 @@ $menu-height: 3rem !default;
 
 	.site-title{
 		float: left;
-		font-size: emCalc(18);
-		font-size: rem-calc(18);
+		font-size: emCalc(24);
+		font-size: rem-calc(24);
 		font-weight: bold;
 		color: contrast-color($menu-background-color, #fff, #000, 50%);
 		margin-bottom: 0;
