@@ -19,6 +19,10 @@ function shepherd_jetpack_setup() {
 }
 add_action( 'after_setup_theme', 'shepherd_jetpack_setup' );
 
+/**
+ * Jetpack featured posts initialization.
+ *
+ */
 function shepherd_jetpack_init(){
 
 	if( is_home() || is_front_page() ){

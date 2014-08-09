@@ -61,7 +61,7 @@ body {
   font-size: 100%; }
 
 body {
-  background: white;
+  background: #e7e7e2;
   color: #222222;
   padding: 0;
   margin: 0;
@@ -96,10 +96,10 @@ img {
 .right {
   float: right !important; }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before, .entry-meta:before, .clearfix:after, .entry-meta:after {
   content: " ";
   display: table; }
-.clearfix:after {
+.clearfix:after, .entry-meta:after {
   clear: both; }
 
 .hide {
@@ -1362,8 +1362,16 @@ Content imports
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+#primary {
+  background-color: #fff;
+  padding-left: 0;
+  padding-right: 0; }
+
 .hentry {
-  margin: 0 0 3em; }
+  margin: 0;
+  padding: 2.5em 3.5em;
+  padding: 2.5rem 3.5rem;
+  border-bottom: 1px solid #eee; }
 
 .byline,
 .updated {
@@ -1384,23 +1392,46 @@ Content imports
 
 .entry-title a {
   color: #222222; }
+.single .entry-title {
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.2; }
 
-.entry-meta,
 .entry-footer {
   color: #aaaaaa;
   font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: .75em;
   letter-spacing: .03em; }
-  .entry-meta a,
   .entry-footer a {
     color: #6a6a6a; }
 
-.entry-footer {
+.entry-meta {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 3em;
+  line-height: 3rem;
+  margin-bottom: 2em;
+  margin-bottom: 2rem; }
+
+.post-format {
+  color: #e91f2e;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 0.8125rem; }
+
+.posted-on {
+  float: right;
+  font-family: Merriweather, Georgia, serif;
+  font-style: italic;
+  font-size: 0.8125rem; }
+  .posted-on a {
+    color: #aaa; }
+
+.single .entry-footer {
   border: 3px double rgba(0, 0, 0, 0.05);
   border-left-width: 0;
   border-right-width: 0;
-  padding: 1em; }
+  padding: 1em 0; }
 
 .more-link {
   font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -1498,11 +1529,11 @@ object {
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
 
-#content {
-  margin-top: 3em;
-  margin-top: 3rem;
-  margin-bottom: 3em;
-  margin-bottom: 3rem; }
+#secondary {
+  padding-top: 3em;
+  padding-top: 3rem;
+  padding-bottom: 3em;
+  padding-bottom: 3rem; }
 
 .site-footer {
   background-color: #222222;

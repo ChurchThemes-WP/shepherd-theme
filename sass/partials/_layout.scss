@@ -1,9 +1,5 @@
 #content{
 	@extend .row;
-	margin-top: 3em;
-	margin-top: 3rem;
-	margin-bottom: 3em;
-	margin-bottom: 3rem;
 }
 
 #primary{
@@ -14,6 +10,10 @@
 #secondary{
 	@extend .large-4;
 	@extend .columns;
+	padding-top: 3em;
+	padding-top: 3rem;
+	padding-bottom: 3em;
+	padding-bottom: 3rem;
 }
 
 .site-branding-container{

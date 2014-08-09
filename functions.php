@@ -163,6 +163,13 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /**
+ * Define custom excerpt more.
+ */
+function new_excerpt_more( $more ) {
+	return '&hellip;';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shepherd-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-08 21:58-0500\n"
+"POT-Creation-Date: 2014-08-08 23:12-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,39 +161,39 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:20 content.php:22
+#: content-page.php:18 content-single.php:20 content.php:29
 msgid "Pages:"
 msgstr ""
 
 #: content-page.php:24 content-search.php:53 content-single.php:60
-#: content.php:55
+#: content.php:62
 msgid "Edit"
 msgstr ""
 
 #: content-search.php:30 content-search.php:40 content-single.php:29
-#: content-single.php:32 content.php:32 content.php:42
+#: content-single.php:32 content.php:39 content.php:49
 msgid ", "
 msgstr ""
 
-#: content-search.php:34 content.php:36
+#: content-search.php:34 content.php:43
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
-#: content-search.php:44 content.php:46
+#: content-search.php:44 content.php:53
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
-#: content-search.php:50 content.php:52
+#: content-search.php:50 content.php:59
 msgid "Leave a comment"
 msgstr ""
 
-#: content-search.php:50 content.php:52
+#: content-search.php:50 content.php:59
 msgid "1 Comment"
 msgstr ""
 
-#: content-search.php:50 content.php:52
+#: content-search.php:50 content.php:59
 msgid "% Comments"
 msgstr ""
 
@@ -223,7 +223,7 @@ msgid ""
 "\">permalink</a>."
 msgstr ""
 
-#: content.php:19
+#: content.php:26
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -296,18 +296,6 @@ msgstr ""
 #: inc/template-tags.php:56
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/template-tags.php:82
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#: inc/template-tags.php:87
-#, php-format
-msgctxt "post author"
-msgid "by %s"
 msgstr ""
 
 #: node_modules/grunt-pot/test/fixtures/some-file.php:3
