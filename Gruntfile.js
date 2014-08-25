@@ -58,17 +58,21 @@ module.exports = function(grunt) {
 			all: ['**/*.php']
 		},
 
-        browserSync: {
-            dev: {
-                bsFiles: {
-                    src : '**/*.css'
-                },
-                options: {
-	            	proxy: "local.demos.upthemes.com",
-                    watchTask: true
-                }
-            }
-        },
+		browserSync: {
+		    dev: {
+			bsFiles: {
+				src: [
+					"*.css",
+					//"**/*.php",
+					"*.js"
+				]
+			},
+			options: {
+				//proxy: "local.demos.upthemes.com",
+				watchTask: true
+			}
+		    }
+		},
 
 		watch: {
 			css: {
@@ -96,7 +100,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-pot');
-	grunt.registerTask('default',['watch']);
+	grunt.registerTask('default',['browserSync', 'watch']);
 	grunt.registerTask('lint',['jshint']);
 	grunt.registerTask('translate',['pot']);
 
