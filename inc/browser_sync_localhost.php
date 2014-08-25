@@ -1,25 +1,13 @@
 <?php
-/**
- * Plugin Name: Browser Sync on localhost
- * Description: If <code>LOCALIP</code> is defined in <code>wp-config.php</code> and has a valid IP address then The Browser Sync JavaScript snippet will be added to <code>wp_footer</code> and WordPress URLs will be filtered to replace <code>localhost</code> with the IP address defined in <code>LOCALIP</code>
- */
-
- /*
-  * Wrap everything in a class for namespacing
-  */
+/*
+* Wrap everything in a class for namespacing
+*/
 class browser_sync_localhost {
-    
-    //fire up variables
-    private static $url = '';
-    private static $dir = '';
     
     /*
      * define variables and call setup method from init
      */
     public static function init() {
-	//these are filtered so that plugins can optionally be moved into themes
-        self::$url = apply_filters( __CLASS__.'_url', plugins_url('/', __FILE__), __FILE__ );
-        self::$dir = apply_filters( __CLASS__.'_dir', plugin_dir_path(__FILE__), __FILE__ );
 	
 	//run plugin setup after plugins/themes are loaded
         add_action('after_setup_theme', array(__CLASS__, 'setup'));
@@ -35,7 +23,7 @@ class browser_sync_localhost {
     public static function setup() {
 	
 	//add Browser Sync JS to footer if on localhost
-	if( self::is_localhost() ){
+	if( self::different_host() ){
 	    add_action( 'wp_footer', array(__CLASS__, 'browser_sync_js'), 9999 );
 	    add_filter('option_home', array(__CLASS__, 'url_filter'), 99, 1); 
             add_filter('option_siteurl', array(__CLASS__, 'url_filter'), 99, 1); 
@@ -43,20 +31,77 @@ class browser_sync_localhost {
             add_filter('template_directory_uri', array(__CLASS__, 'url_filter'), 99, 1);
 	}
     }//end setup method
-
+    
     /**
-    * Are we on localhost?
-    * @return string	$local_IP 	LOCALIP if defined and valid, otherwise returns false.
+    * Get WordPress host from site url
     */
-   private static function is_localhost(){
-	//check for LOCALHOST from wp-config.php and make sure it is a valid IP
-	if( defined('LOCALIP') && preg_match('/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/',LOCALIP) === 1 ){
-	    return LOCALIP;
+    private static function wordpress_host(){
+	$host_matches = array();
+	
+	global $wpdb;
+	
+	//get WordPress url from database
+	$wordpress_url = $wpdb->get_var("SELECT `option_value` FROM $wpdb->options WHERE `option_name` = 'siteurl';");
+	
+	//remove www.
+	$wordpress_url = str_replace('www.', '', $wordpress_url);
+	
+	//strip http, www, etc from wordpress url
+	preg_match('|http://([^/]+)|',$wordpress_url, $host_matches);
+	
+	if( !empty($host_matches) AND isset($host_matches[1]) ){
+	    //if successful return wordpress host
+	    return $host_matches[1];
 	} else{
-	    //if not return false
+	    //otherwise return false
 	    return false;
 	}
-    }//end is_localhost method
+    }//end wordpress_host method
+    
+    /**
+    * get localhost if defined
+    */
+   private static function get_localhost(){
+	$local_host = $_SERVER['HTTP_HOST'];
+	
+	//if localhost is empty, bail
+	if( empty($local_host) ){
+	    return false;
+	} else{
+	    //otherwise strip www and return
+	    return str_replace('www.', '', $local_host);
+	}
+	
+    }//end get_localhost method
+    
+    /**
+    * Does WordPress host differ from localhost?
+    */
+    private static function different_host(){
+	
+	//get localhost
+	$local_host = self::get_localhost();
+	
+	//if no localhost, bail
+	if( $local_host === false ){
+	    return false;
+	}
+	
+	//get WordPress host
+	$wordpress_host = self::wordpress_host();
+	
+	//if no WordPress host, bail
+	if( $wordpress_host === false ){
+	    return false;
+	}
+	
+	//if wordpress host doesn't match the localhost return true, otherwise return false
+	if( $wordpress_host != $current_host ){
+	    return true;
+	} else{
+	    return false;
+	}
+    }//end different_host method
     
     /**
     * Add browser sync JS to footer
@@ -69,21 +114,18 @@ class browser_sync_localhost {
     
     /**
     * Filter URL, replacing localhost w/ IP
-    * @return	$url 	with filtered value if LOCALIP is defined and valid
     */
     public static function url_filter($url){
-        //get current URL
-        $current_url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
-        $current_url .= ( $_SERVER["SERVER_PORT"] !== 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
-        $current_url .= $_SERVER["REQUEST_URI"];
-        
-        //get local IP
-        $local_IP = self::is_localhost();
-        
-        //if local IP is valid and in the current URL
-        if( $local_IP !== false && stripos($current_url, $local_IP) !== false ){
-            $url = str_replace('localhost', $local_IP, $url );
-        }
+	//get WordPress host
+	$wordpress_host = self::wordpress_host();
+	
+	//get localhost
+	$local_host = self::get_localhost();
+	
+	//if current host is not the same as what's in WordPress filter the WordPress value
+	if( self::different_host() ){
+	    $url = str_replace($wordpress_host, $local_host, $url );
+	}
         
         return $url;
     }//end url_filter
