@@ -37,6 +37,10 @@ class browser_sync_localhost {
 	//add Browser Sync JS to footer if on localhost
 	if( self::is_localhost() ){
 	    add_action( 'wp_footer', array(__CLASS__, 'browser_sync_js'), 9999 );
+	    add_filter('option_home', array(__CLASS__, 'url_filter'), 99, 1); 
+            add_filter('option_siteurl', array(__CLASS__, 'url_filter'), 99, 1); 
+            add_filter('stylesheet_directory_uri', array(__CLASS__, 'url_filter'), 99, 1); 
+            add_filter('template_directory_uri', array(__CLASS__, 'url_filter'), 99, 1);
 	}
     }//end setup method
 
@@ -62,6 +66,27 @@ class browser_sync_localhost {
 	document.write(\"<script async src='//HOST:3000/browser-sync-client.1.3.6.js'><\/script>\".replace(/HOST/g, 	location.hostname));
 	//]]></script>";
     }//end browser_sync_js method
+    
+    /**
+    * Filter URL, replacing localhost w/ IP
+    * @return	$url 	with filtered value if LOCALIP is defined and valid
+    */
+    public static function url_filter($url){
+        //get current URL
+        $current_url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
+        $current_url .= ( $_SERVER["SERVER_PORT"] !== 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
+        $current_url .= $_SERVER["REQUEST_URI"];
+        
+        //get local IP
+        $local_IP = self::is_localhost();
+        
+        //if local IP is valid and in the current URL
+        if( $local_IP !== false && stripos($current_url, $local_IP) !== false ){
+            $url = str_replace('localhost', $local_IP, $url );
+        }
+        
+        return $url;
+    }//end url_filter
     
 }//end browser_sync_localhost
 
