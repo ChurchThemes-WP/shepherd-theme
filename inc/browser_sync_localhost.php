@@ -9,6 +9,11 @@ class browser_sync_localhost {
      */
     public static function init() {
 	
+	//if DEVENV isn't defined in wp-config.php, bail
+	if( !defined('DEVENV') || DEVENV !== true ){
+	    return;
+	}
+	
 	//run plugin setup after plugins/themes are loaded
         add_action('after_setup_theme', array(__CLASS__, 'setup'));
 	
