@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 				// Task-specific options go here.
 			},
 			your_target: {
-                src: '*.css'
+				src: '*.css'
 			},
 		},
 
@@ -63,7 +63,6 @@ module.exports = function(grunt) {
 			bsFiles: {
 				src: [
 					"*.css",
-					//"**/*.php",
 					"*.js"
 				]
 			},
