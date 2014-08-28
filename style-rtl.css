@@ -24,6 +24,11 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 Variables
 --------------------------------------------------------------*/
+/* @noflip */
+body {
+  direction: rtl;
+  unicode-bidi: embed; }
+
 meta.foundation-mq-small {
   font-family: "/only screen/";
   width: 0em; }
@@ -119,6 +124,11 @@ textarea {
 
 select {
   width: 100%; }
+
+/* @noflip */
+body {
+  direction: rtl;
+  unicode-bidi: embed; }
 
 .row, #content, .site-branding-container, .main-navigation, .site-footer .site-footer-inner, .featured-content .featured-content-inner {
   width: 100%;
@@ -1240,6 +1250,11 @@ select {
     position: relative;
     left: 91.66667%;
     right: auto; } }
+/* @noflip */
+body {
+  direction: rtl;
+  unicode-bidi: embed; }
+
 .text-left {
   text-align: right !important; }
 
