@@ -22,9 +22,6 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 and Blueprint http://www.blueprintcss.org/
 */
 
-// Left-to-Right language support by default
-$text-direction: ltr;
-
 @import "variables/variables";
 @import "mixins/functions";
 @import "mixins/global";
