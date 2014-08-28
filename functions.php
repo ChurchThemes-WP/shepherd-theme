@@ -196,3 +196,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load browser sync for localhost
+ */
+get_template_part('inc/browser_sync_localhost');

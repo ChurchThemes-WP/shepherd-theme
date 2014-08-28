@@ -1,5 +1,5 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "mixins/functions";
+@import "../mixins/functions";
 
 // Left-to-Right language support by default
 $text-direction: ltr;
