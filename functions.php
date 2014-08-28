@@ -99,7 +99,9 @@ add_action( 'widgets_init', 'shepherd_widgets_init' );
  * Enqueue scripts and styles.
  */
 function shepherd_scripts() {
-	wp_enqueue_style( 'shepherd-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'shepherd', get_stylesheet_uri() );
+
+	wp_style_add_data( 'shepherd', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'shepherd-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -108,6 +110,7 @@ function shepherd_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'shepherd_scripts' );
 

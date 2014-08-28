@@ -24,6 +24,20 @@ module.exports = function(grunt) {
 			},
 		},
 
+		cssjanus: {
+			theme: {
+				options: {
+					swapLtrRtlInUrl: false
+				},
+				files: [
+					{
+						src: 'style.css',
+						dest: 'style-rtl.css'
+					}
+				]
+			}
+		},
+
 		pot: {
 				options:{
 					text_domain: 'shepherd', //Your text domain. Produces my-text-domain.pot
@@ -73,7 +87,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: '**/*.scss',
-				tasks: ['sass','autoprefixer']
+				tasks: ['sass','autoprefixer','cssjanus']
 			},
 			scripts: {
 				files: ['js/**/*.js', 'Gruntfile.js' ],
@@ -93,6 +107,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-cssjanus');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-pot');
