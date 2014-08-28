@@ -79,13 +79,15 @@ function shepherd_display_featured_posts(){
 function shepherd_get_featured_content_post_bg(){
 	$featured_content = shepherd_get_featured_posts();
 
-	$post_ID = $featured_content[0]->ID;
+	if( $featured_content && is_array( $featured_content ) ):
 
-	if( has_post_thumbnail( $post_ID ) ){
-		$image_id = get_post_thumbnail_id( $post_ID );
+		$post_ID = $featured_content[0]->ID;
 
-		$featured_image_bg = wp_get_attachment_image_src( $image_id, 'original', true );
-		$featured_image_bg = $featured_image_bg[0];
+		if( has_post_thumbnail( $post_ID ) ){
+			$image_id = get_post_thumbnail_id( $post_ID );
+
+			$featured_image_bg = wp_get_attachment_image_src( $image_id, 'original', true );
+			$featured_image_bg = $featured_image_bg[0];
 
 ?>
 <style id="shepherd-featured-content">
@@ -94,7 +96,9 @@ function shepherd_get_featured_content_post_bg(){
 }
 </style>
 <?php
-	}
+		}
+	endif;
+
 }
 
 add_action( 'wp_print_styles', 'shepherd_get_featured_content_post_bg' );
