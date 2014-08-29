@@ -306,12 +306,6 @@ $cursor-pointer-value: pointer !default;
 $cursor-help-value: help !default;
 $cursor-text-value: text !default;
 
-/* @noflip */
-body {
-	direction: rtl;
-	unicode-bidi: embed;
-}
-
 @include exports("global") {
 
 	// Meta styles are included in all builds, as they are a dependancy of the Javascript.
