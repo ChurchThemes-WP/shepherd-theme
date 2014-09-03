@@ -67,7 +67,8 @@ body {
   font-style: normal;
   line-height: 150%;
   position: relative;
-  cursor: default; }
+  cursor: default;
+  -webkit-font-smoothing: antialiased; }
 
 a:hover {
   cursor: pointer; }
@@ -1512,6 +1513,21 @@ a {
 /* Search widget */
 .widget_search .search-submit {
   display: none; }
+
+.widget-title {
+  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  padding: 1em 1.25em 1em 0em;
+  padding: 1rem 1.25rem 1rem 0rem;
+  right: -1.25em;
+  right: -1.25rem;
+  position: relative;
+  -moz-box-sizing: content-box;
+       box-sizing: content-box;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 3px 0 0 3px;
+  background: #cdcdc9; }
 
 /*--------------------------------------------------------------
 Content imports
