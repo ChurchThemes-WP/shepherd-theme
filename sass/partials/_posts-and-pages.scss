@@ -17,7 +17,7 @@
 		color: $heading-font-color;
 	}
 
-	&.has-post-thumbnail {
+	&.has-featured-image {
 		padding: 0;
 
 		.entry-header {
@@ -133,7 +133,7 @@
 	margin-bottom: 2rem;
 	@extend .clearfix;
 
-	.has-post-thumbnail & {
+	.has-featured-image & {
 		border-bottom: 1px solid rgba(255,255,255,.2);
 	}
 }
@@ -155,7 +155,7 @@
 	a{
 		color: $small-font-color;
 
-		.has-post-thumbnail & { color: #fff; }
+		.has-featured-image & { color: #fff; }
 	}
 }
 

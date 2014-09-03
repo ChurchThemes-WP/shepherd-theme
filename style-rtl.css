@@ -1531,14 +1531,14 @@ Content imports
   border-bottom: 2px solid #eee; }
   .hentry .entry-header {
     color: #222; }
-  .hentry.has-post-thumbnail {
+  .hentry.has-featured-image {
     padding: 0; }
-    .hentry.has-post-thumbnail .entry-header {
+    .hentry.has-featured-image .entry-header {
       padding: 2.5em 3.5em;
       padding: 2.5rem 3.5rem;
       background-size: cover;
       position: relative; }
-      .hentry.has-post-thumbnail .entry-header:before {
+      .hentry.has-featured-image .entry-header:before {
         content: "";
         position: absolute;
         top: 0;
@@ -1546,15 +1546,15 @@ Content imports
         left: 0;
         bottom: 0;
         background: rgba(0, 0, 0, 0.5); }
-      .hentry.has-post-thumbnail .entry-header * {
+      .hentry.has-featured-image .entry-header * {
         position: relative;
         z-index: 1; }
-    .hentry.has-post-thumbnail .entry-title a {
+    .hentry.has-featured-image .entry-title a {
       color: #fff; }
-    .hentry.has-post-thumbnail .entry-content {
+    .hentry.has-featured-image .entry-content {
       margin: 2.5em 3.5em;
       margin: 2.5rem 3.5rem; }
-    .hentry.has-post-thumbnail .entry-footer {
+    .hentry.has-featured-image .entry-footer {
       margin: 2.5em 3.5em;
       margin: 2.5rem 3.5rem; }
 
@@ -1608,7 +1608,7 @@ Content imports
   line-height: 3rem;
   margin-bottom: 2em;
   margin-bottom: 2rem; }
-  .has-post-thumbnail .entry-meta {
+  .has-featured-image .entry-meta {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
 
 .post-format {
@@ -1625,7 +1625,7 @@ Content imports
   font-size: 0.8125rem; }
   .posted-on a {
     color: #6f6f6f; }
-    .has-post-thumbnail .posted-on a {
+    .has-featured-image .posted-on a {
       color: #fff; }
 
 .single .entry-footer {
