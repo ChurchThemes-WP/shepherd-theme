@@ -69,6 +69,5 @@
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
-
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
