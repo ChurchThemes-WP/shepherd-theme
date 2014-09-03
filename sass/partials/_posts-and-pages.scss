@@ -42,6 +42,7 @@
 			}
 		}
 
+		.entry-title,
 		.entry-title a {
 			color: #fff;
 		}
@@ -157,13 +158,6 @@
 
 		.has-featured-image & { color: #fff; }
 	}
-}
-
-.single .entry-footer{
-	border: 3px double rgba(0,0,0,.05);
-	border-left-width: 0;
-	border-right-width: 0;
-	padding: 1em 0;
 }
 
 .more-link{

@@ -4,13 +4,30 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+<?php
+	if ( shepherd_get_featured_image_url() )
+		$extra_classes[] = "has-featured-image";
+?>
+<article id="post-<?php the_ID(); ?>" class="<?php echo implode( " ", get_post_class($extra_classes) ); ?>">
+	<?php if ( shepherd_get_featured_image_url() ) { ?>
+		<header class="entry-header" style="background-image: url('<?php echo shepherd_get_featured_image_url(); ?>')">
+	<?php } else { ?>
+		<header class="entry-header">
+	<?php } ?>
+		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
+			<?php
+			$format = get_post_format( get_the_ID() );
+			if ( false === $format ) {
+				$format = 'standard';
+			}
+			echo '<span class="post-format">' . $format . '</span>';
+			?>
 			<?php shepherd_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php endif; ?>
+
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -24,39 +41,30 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'shepherd' ) );
+		<div class="entry-footer-right">
+			<?php edit_post_link( __( 'Edit', 'shepherd' ), '<span class="edit-link">', '</span>' ); ?>
+		</div>
 
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'shepherd' ) );
+		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$categories_list = get_the_category_list( __( ', ', 'shepherd' ) );
+				if ( $categories_list && shepherd_categorized_blog() ) :
+			?>
+			<span class="cat-links">
+				<?php printf( __( 'Posted in: %1$s', 'shepherd' ), $categories_list ); ?>
+			</span>
+			<?php endif; // End if categories ?>
 
-			if ( ! shepherd_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'shepherd' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'shepherd' );
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'shepherd' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'shepherd' );
-				}
-
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink()
-			);
-		?>
-
-		<?php edit_post_link( __( 'Edit', 'shepherd' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( '', __( ', ', 'shepherd' ) );
+				if ( $tags_list ) :
+			?>
+			<span class="tags-links">
+				<?php printf( __( 'Filed under: %1$s', 'shepherd' ), $tags_list ); ?>
+			</span>
+			<?php endif; // End if $tags_list ?>
+		<?php endif; // End if 'post' == get_post_type() ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

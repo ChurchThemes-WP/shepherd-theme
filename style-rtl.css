@@ -1576,7 +1576,7 @@ Content imports
       .hentry.has-featured-image .entry-header * {
         position: relative;
         z-index: 1; }
-    .hentry.has-featured-image .entry-title a {
+    .hentry.has-featured-image .entry-title, .hentry.has-featured-image .entry-title a {
       color: #fff; }
     .hentry.has-featured-image .entry-content {
       margin: 2.5em 3.5em;
@@ -1654,12 +1654,6 @@ Content imports
     color: #6f6f6f; }
     .has-featured-image .posted-on a {
       color: #fff; }
-
-.single .entry-footer {
-  border: 3px double rgba(0, 0, 0, 0.05);
-  border-right-width: 0;
-  border-left-width: 0;
-  padding: 1em 0; }
 
 .more-link {
   font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
