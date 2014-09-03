@@ -1370,7 +1370,7 @@ a {
     .main-navigation li a:hover {
       background-color: #333333;
       text-decoration: none; }
-.main-navigation .sub-menu a {
+.main-navigation .menu-item-has-children a {
   line-height: 3.5rem; }
 @media all and (min-width: 480px) {
   .main-navigation {
@@ -1393,45 +1393,54 @@ a {
       margin: 0;
       list-style: none;
       position: relative; }
-      .main-navigation li.current-menu-item a {
+      .main-navigation li.current-menu-item > a, .main-navigation li:hover > a {
         color: #fff;
         background-color: #000; }
-        .main-navigation li.current-menu-item a:after {
+        .main-navigation li.current-menu-item > a:after, .main-navigation li:hover > a:after {
           border-color: #fff; }
-      .main-navigation li.current-menu-item.has-sub > a:after {
+      .main-navigation li.current-menu-item.menu-item-has-children > a:after, .main-navigation li:hover.menu-item-has-children > a:after {
         border-top-color: #fff; }
-      .main-navigation li.has-sub > a:after {
+      .main-navigation li.menu-item-has-children a {
+        padding-right: 2em;
+        padding-right: 2rem; }
+      .main-navigation li.menu-item-has-children > a:after {
         content: "";
         display: block;
-        position: relative;
-        float: right;
-        top: 6px;
+        position: absolute;
+        top: 50%;
+        right: 0.6em;
+        right: 0.6rem;
+        margin-top: -3px;
         border: 5px solid transparent;
-        border-top-color: white;
+        border-top-color: #a6a6a6;
         height: 0;
         width: 0;
         margin-left: 10px; }
-      .main-navigation li .sub-menu .has-sub > a:after {
+      .main-navigation li .sub-menu .menu-item-has-children:hover > a:after {
+        border-left-color: #fff; }
+      .main-navigation li .sub-menu .menu-item-has-children > a:after {
         content: "";
         display: block;
-        position: relative;
-        float: right;
-        top: 4px;
+        position: absolute;
+        top: 50%;
+        right: 0.6em;
+        right: 0.6rem;
+        margin-top: -6px;
         border: 5px solid transparent;
-        border-left-color: #fff;
+        border-left-color: #a6a6a6;
         height: 0;
         width: 0;
         margin-left: 10px; }
-      .main-navigation li.has-sub:hover, .main-navigation li.menu-item-has-children:hover {
+      .main-navigation li.menu-item-has-children:hover {
         position: relative; }
-        .main-navigation li.has-sub:hover > ul, .main-navigation li.menu-item-has-children:hover > ul {
+        .main-navigation li.menu-item-has-children:hover > ul {
           display: block;
           background-color: #000;
           width: 250px; }
-          .main-navigation li.has-sub:hover > ul ul, .main-navigation li.menu-item-has-children:hover > ul ul {
+          .main-navigation li.menu-item-has-children:hover > ul ul {
             left: 100%;
             top: 0; }
-          .main-navigation li.has-sub:hover > ul li, .main-navigation li.menu-item-has-children:hover > ul li {
+          .main-navigation li.menu-item-has-children:hover > ul li {
             float: none;
             display: block; } }
 
