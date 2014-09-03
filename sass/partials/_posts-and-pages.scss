@@ -11,7 +11,47 @@
 	margin: 0;
 	padding: 2.5em 3.5em;
 	padding: 2.5rem 3.5rem;
-	border-bottom: 1px solid #eee;
+	border-bottom: 2px solid #eee;
+
+	&.has-post-thumbnail {
+		padding: 0;
+
+		.entry-header {
+			padding: 2.5em 3.5em;
+			padding: 2.5rem 3.5rem;
+			background-size: cover;
+			position: relative;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0,0,0,.5);
+			}
+
+			* {
+				position: relative;
+				z-index: 1;
+			}
+		}
+
+		.entry-title a {
+			color: #fff;
+		}
+
+		.entry-content {
+			margin: 2.5em 3.5em;
+			margin: 2.5rem 3.5rem;
+		}
+
+		.entry-footer {
+			margin: 2.5em 3.5em;
+			margin: 2.5rem 3.5rem;
+		}
+	}
 }
 
 .byline,
@@ -48,14 +88,14 @@
 }
 
 .entry-footer{
-	color: $body-font-subtle-color;
+	color: $small-font-color;
 	font-family: $header-font-family;
-	text-transform: uppercase;
-	font-size: .75em;
-	letter-spacing: .03em;
+	font-size: rem-calc(14);
+	border-top: 1px solid rgba(0,0,0,.1);
+	padding-top: 1em;
 
 	a{
-		color: darken($body-font-subtle-color,25%);
+		color: $primary-color;
 	}
 }
 
@@ -66,13 +106,18 @@
 	margin-bottom: 2em;
 	margin-bottom: 2rem;
 	@extend .clearfix;
+
+	.has-post-thumbnail & {
+		border-bottom: 1px solid rgba(255,255,255,.2);
+	}
 }
 
 .post-format{
 	color: $primary-color;
 	text-transform: uppercase;
-	font-family: $header-font-family;
+	font-family: $sans-font-family;
 	font-size: rem-calc(13);
+	font-weight: bold;
 }
 
 .posted-on{
@@ -82,7 +127,9 @@
 	font-size: rem-calc(13);
 
 	a{
-		color: #aaa;
+		color: $small-font-color;
+
+		.has-post-thumbnail & { color: #fff; }
 	}
 }
 
@@ -95,6 +142,9 @@
 
 .more-link{
 	font-family: $header-font-family;
-	font-weight: bold;
-	text-transform: capitalize;
+	font-weight: normal;
+	border-radius: $global-radius;
+	border: 1px solid $primary-color;
+	padding: .5em 1em;
+	padding: .5rem 1rem;
 }
