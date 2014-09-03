@@ -11,3 +11,18 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+.widget-title {
+	font-family: $sans-font-family;
+	padding: 1em 0em 1em 1.25em;
+	padding: 1rem 0rem 1rem 1.25rem;
+	left: -1.25em;
+	left: -1.25rem;
+	position: relative;
+	box-sizing: content-box;
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 0 $global-radius $global-radius 0;
+	background: desaturate( darken( $body-bg, 10% ), 5% );
+}
