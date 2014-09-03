@@ -5,7 +5,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<?php if ( in_array( 'has-post-thumbnail', get_post_class() ) ) { ?>
+		<header class="entry-header" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>')">
+	<?php } else { ?>
+		<header class="entry-header">
+	<?php } ?>
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
@@ -23,7 +27,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'shepherd' ) ); ?>
+		<?php the_content( __( 'Read More <span class="meta-nav">&rarr;</span>', 'shepherd' ) ); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'shepherd' ),
