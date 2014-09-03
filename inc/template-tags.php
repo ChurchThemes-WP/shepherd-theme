@@ -117,6 +117,20 @@ function shepherd_categorized_blog() {
 }
 
 /**
+ * Returns the URL of the featured image if it exists, otherwise returns false
+ *
+ * @return bool/string
+ */
+function shepherd_get_featured_image_url() {
+	$featured_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+
+	if ( $featured_image_url == "" )
+		return false;
+	else
+		return $featured_image_url;
+}
+
+/**
  * Flush out the transients used in shepherd_categorized_blog.
  */
 function shepherd_category_transient_flusher() {
