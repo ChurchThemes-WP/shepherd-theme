@@ -3,10 +3,13 @@
  * @package Shepherd
  */
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( in_array( 'has-post-thumbnail', get_post_class() ) ) { ?>
-		<header class="entry-header" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>')">
+<?php
+	if ( shepherd_get_featured_image_url() )
+		$extra_classes[] = "has-featured-image";
+?>
+<article id="post-<?php the_ID(); ?>" class="<?php echo implode( " ", get_post_class($extra_classes) ); ?>">
+	<?php if ( shepherd_get_featured_image_url() ) { ?>
+		<header class="entry-header" style="background-image: url('<?php echo shepherd_get_featured_image_url(); ?>')">
 	<?php } else { ?>
 		<header class="entry-header">
 	<?php } ?>
