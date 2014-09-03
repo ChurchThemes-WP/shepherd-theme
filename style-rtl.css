@@ -59,7 +59,7 @@ html, body {
 
 body {
   background: #e7e7e2;
-  color: #222;
+  color: #444;
   padding: 0;
   margin: 0;
   font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -1135,7 +1135,7 @@ dl dd {
 abbr, acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222;
+  color: #444;
   border-bottom: 1px dotted #ddd;
   cursor: help; }
 
@@ -1529,6 +1529,8 @@ Content imports
   padding: 2.5em 3.5em;
   padding: 2.5rem 3.5rem;
   border-bottom: 2px solid #eee; }
+  .hentry .entry-header {
+    color: #222; }
   .hentry.has-post-thumbnail {
     padding: 0; }
     .hentry.has-post-thumbnail .entry-header {
@@ -1581,9 +1583,24 @@ Content imports
   font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding-top: 1em; }
+  padding-top: 1em;
+  overflow: hidden; }
   .entry-footer a {
     color: #e91f2e; }
+  .entry-footer .entry-footer-right {
+    float: left; }
+  .entry-footer .cat-links, .entry-footer .tags-links {
+    display: block; }
+  .entry-footer .post-edit-link {
+    font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    border-radius: 3px;
+    border: 1px solid #e91f2e;
+    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    text-align: center;
+    display: inline-block; }
 
 .entry-meta {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);

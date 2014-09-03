@@ -13,6 +13,10 @@
 	padding: 2.5rem 3.5rem;
 	border-bottom: 2px solid #eee;
 
+	.entry-header {
+		color: $heading-font-color;
+	}
+
 	&.has-post-thumbnail {
 		padding: 0;
 
@@ -77,7 +81,7 @@
 
 .entry-title{
 	a{
-		color: $body-font-color;
+		color: $heading-font-color;
 	}
 
 	.single &{
@@ -93,9 +97,31 @@
 	font-size: rem-calc(14);
 	border-top: 1px solid rgba(0,0,0,.1);
 	padding-top: 1em;
+	overflow: hidden;
 
 	a{
 		color: $primary-color;
+	}
+
+	.entry-footer-right {
+		float: right;
+	}
+
+	.cat-links,
+	.tags-links {
+		display: block;
+	}
+
+	.post-edit-link {
+		font-family: $header-font-family;
+		font-weight: normal;
+		border-radius: $global-radius;
+		border: 1px solid $primary-color;
+		padding: .5em 1em;
+		padding: .5rem 1rem;
+		margin-left: 1rem;
+		text-align: center;
+		display: inline-block;
 	}
 }
 
