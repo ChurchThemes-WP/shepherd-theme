@@ -27,7 +27,7 @@
 		<div class="main-navigation-container">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'shepherd' ); ?></button>
+				<div class="menu-toggle" id="menu-toggle"><div></div><div></div><div></div></div>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #site-navigation -->
 		</div>
