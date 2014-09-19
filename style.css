@@ -1100,6 +1100,14 @@ code {
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.125rem; }
 
+table {
+  border-collapse: collapse;
+  margin-bottom: 1.25rem; }
+  table th, table td {
+    border: 1px solid #cdcdc9;
+    padding: 0.5em;
+    padding: 0.5rem; }
+
 /* Lists */
 ul, ol, dl {
   font-size: 1rem;
