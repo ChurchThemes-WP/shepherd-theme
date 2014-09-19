@@ -25,6 +25,12 @@ $featured-content-bg: rgba(0,0,0,.6) !default;
 		padding: 1.5em 4em 0;
 		margin-bottom: 0;
 		border-bottom: 0;
+
+		@media screen and (max-width: 600px) {
+			margin-top: 0;
+			padding: 0em 1em;
+			padding: 0rem 1rem;
+		}
 	}
 
 	.entry-meta,
