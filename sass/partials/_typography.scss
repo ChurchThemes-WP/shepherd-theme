@@ -337,7 +337,7 @@ $align-class-breakpoints:
       margin-bottom: $paragraph-margin-bottom;
       th,
       td {
-        border: 1px solid desaturate( darken( $body-bg, 10% ), 5% );
+        border: 1px solid #ddd;
         padding: .5em;
         padding: .5rem;
       }
@@ -429,6 +429,7 @@ $align-class-breakpoints:
       margin: 0 0 $paragraph-margin-bottom;
       padding: $blockquote-padding;
       border-#{$default-float}: $blockquote-border;
+      overflow: hidden;
 
       cite {
         display: block;
