@@ -1559,8 +1559,19 @@ a {
   max-width: 100%; }
 
 /* Search widget */
-.widget_search .search-submit {
-  display: none; }
+.widget_search {
+  padding-right: 1.25em;
+  padding-right: 1.25rem; }
+  .widget_search .search-field {
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box; }
+    .widget_search .search-field:focus {
+      background: #fff; }
+  .widget_search .search-submit {
+    display: none; }
 
 .widget-title {
   font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -1920,10 +1931,10 @@ img[class*="wp-image-"] {
   max-width: 11.11%; }
 
 #secondary {
-  padding-top: 3em;
-  padding-top: 3rem;
-  padding-bottom: 3em;
-  padding-bottom: 3rem; }
+  padding-top: 1.5em;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5em;
+  padding-bottom: 1.5rem; }
 
 .site-header .site-title {
   font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }

@@ -8,8 +8,24 @@
 }
 
 /* Search widget */
-.widget_search .search-submit {
-	display: none;
+.widget_search {
+	padding-right: 1.25em;
+	padding-right: 1.25rem;
+
+	.search-field {
+		width: 100%;
+		background: #fff;
+		border-radius: 2px;
+		box-sizing: border-box;
+
+		&:focus {
+			background: #fff;
+		}
+	}
+
+	.search-submit {
+		display: none;
+	}
 }
 
 .widget-title {
