@@ -1645,7 +1645,8 @@ a {
       overflow: hidden; }
       .widget_calendar #calendar_wrap #wp-calendar td, .widget_calendar #calendar_wrap #wp-calendar th {
         width: 14.285714286%;
-        background: #fff; }
+        background: #fff;
+        border: 0; }
       .widget_calendar #calendar_wrap #wp-calendar, .widget_calendar #calendar_wrap #wp-calendar td, .widget_calendar #calendar_wrap #wp-calendar th, .widget_calendar #calendar_wrap #wp-calendar caption {
         text-align: center; }
       .widget_calendar #calendar_wrap #wp-calendar caption {
