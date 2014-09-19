@@ -269,9 +269,11 @@ $menu-height: 3.5rem !default;
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
+
 	padding: 1.5em 3.5em;
 	padding: 1.5rem 3.5rem;
 	overflow: hidden;
+	border-bottom: 2px solid #eee;
 }
 
 .comment-navigation .nav-previous,
