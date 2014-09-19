@@ -67,6 +67,11 @@
 			border-bottom: 1px solid desaturate( darken( $body-bg, 10% ), 5% );
 		}
 	}
+
+	> ul:last-child > li:last-child > a,
+	> div > ul:last-child > li:last-child > a {
+		border-bottom: 0;
+	}
 }
 
 /* Calendar Widget */

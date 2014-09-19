@@ -1625,6 +1625,8 @@ a {
   padding: 0.5em 0;
   padding: 0.5rem 0;
   border-bottom: 1px solid #cdcdc9; }
+.widget > ul:last-child > li:last-child > a, .widget > div > ul:last-child > li:last-child > a {
+  border-bottom: 0; }
 
 /* Calendar Widget */
 .widget_calendar {
