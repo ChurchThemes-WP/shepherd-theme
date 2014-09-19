@@ -301,6 +301,11 @@ $align-class-breakpoints:
       line-height: inherit;
     }
 
+    pre {
+      max-width: 100%;
+      overflow: auto;
+    }
+
     code {
       font-family: $code-font-family;
       font-weight: $code-font-weight;
