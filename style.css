@@ -1075,17 +1075,30 @@ small {
 
 pre {
   max-width: 100%;
-  overflow: auto; }
+  overflow: auto;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #eee;
+  background-color: #222;
+  border-width: 0;
+  border-style: solid;
+  border-color: #1f1f1f;
+  border-radius: 2px;
+  padding: 0.125rem 0.3125rem 0.125rem;
+  margin-bottom: 1.25rem; }
 
 code {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-weight: normal;
-  color: #aaa;
-  background-color: #e6e6e6;
-  border-width: 1px;
+  font-size: 0.9em;
+  color: #eee;
+  background-color: #222;
+  border-width: 0;
   border-style: solid;
-  border-color: #cfcfcf;
-  padding: 0.125rem 0.3125rem 0.0625rem; }
+  border-color: #1f1f1f;
+  border-radius: 2px;
+  padding: 0.125rem 0.3125rem 0.125rem; }
 
 /* Lists */
 ul, ol, dl {
@@ -1562,6 +1575,9 @@ a {
 .widget_search {
   padding-right: 1.25em;
   padding-right: 1.25rem; }
+  @media screen and (max-width: 600px) {
+    .widget_search {
+      padding-right: 0; } }
   .widget_search .search-field {
     width: 100%;
     background: #fff;

@@ -214,14 +214,16 @@ $paragraph-aside-font-style: italic;
 $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
-$code-color: #aaa;
+$code-color: #eee;
 $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $code-font-weight: $font-weight-normal;
-$code-background-color: scale-color($secondary-color, $lightness: 90%);
-$code-border-size: 1px;
+$code-font-size: .9em;
+$code-background-color: contrast-color($primary-color,#222,white,30%);
+$code-border-size: 0;
+$code-border-radius: 2px;
 $code-border-style: solid;
 $code-border-color: scale-color($code-background-color, $lightness: -10%);
-$code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
+$code-padding: rem-calc(2) rem-calc(5) rem-calc(2);
 
 // We use these to style anchors
 $anchor-text-decoration: none;
