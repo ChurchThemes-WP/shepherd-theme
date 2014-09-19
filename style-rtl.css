@@ -1104,7 +1104,7 @@ table {
   border-collapse: collapse;
   margin-bottom: 1.25rem; }
   table th, table td {
-    border: 1px solid #cdcdc9;
+    border: 1px solid #ddd;
     padding: 0.5em;
     padding: 0.5rem; }
 
@@ -1171,8 +1171,9 @@ abbr {
 /* Blockquotes */
 blockquote {
   margin: 0 0 1.25rem;
-  padding: 0.5625rem 1.1875rem 0 1.25rem;
-  border-right: 1px solid #ddd; }
+  padding: 1.25rem 1.25rem 0 1.25rem;
+  border-right: 2px solid #ddd;
+  overflow: hidden; }
   blockquote cite {
     display: block;
     font-size: 0.8125rem;
@@ -1515,7 +1516,8 @@ a {
 .site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation {
   padding: 1.5em 3.5em;
   padding: 1.5rem 3.5rem;
-  overflow: hidden; }
+  overflow: hidden;
+  border-bottom: 2px solid #eee; }
 
 .comment-navigation .nav-previous, .paging-navigation .nav-previous, .post-navigation .nav-previous {
   float: right;
