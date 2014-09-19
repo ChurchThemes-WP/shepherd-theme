@@ -13,6 +13,11 @@
 	padding: 2.5rem 3.5rem;
 	border-bottom: 2px solid #eee;
 
+	@media screen and (max-width: 600px) {
+		padding: 0em 1em .5em 1em;
+		padding: 0rem 1rem .5rem 1rem;
+	}
+
 	.entry-header {
 		color: $heading-font-color;
 	}
