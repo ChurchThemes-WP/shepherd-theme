@@ -1616,7 +1616,8 @@ a {
   @media screen and (max-width: 600px) {
     .widget-title {
       padding: 1em 1.25em 1em 1.25em;
-      padding: 1rem 1.25rem 1rem 1.25rem; } }
+      padding: 1rem 1.25rem 1rem 1.25rem;
+      border-radius: 0; } }
 
 .widget ul {
   list-style: none;
