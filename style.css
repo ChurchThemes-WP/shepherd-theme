@@ -1916,7 +1916,9 @@ article.format-link {
     .comment-list li .comment-author, .comment-list li .comment-metadata {
       font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
     .comment-list li .comment-metadata {
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      font-size: 0.8125rem;
+      line-height: 1em; }
   .comment-list .comment-reply-link:after {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
