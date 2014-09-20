@@ -75,6 +75,38 @@
 	}
 }
 
+/* Author Widget */
+.widget_author {
+
+	.widget-title {
+		margin-bottom: 1.25em;
+		margin-bottom: 1.25rem;
+	}
+
+	.avatar {
+		width: 80px;
+		border-radius: 4px;
+		float: left;
+		margin-right: 1em;
+		margin-right: 1rem;
+		margin-bottom: .5em;
+		margin-bottom: .5rem;
+		overflow: hidden;
+	}
+
+	.author-name {
+		font-size: rem-calc(18);
+		font-weight: bold;
+		margin-bottom: .5em;
+		margin-bottom: .5rem;
+	}
+
+	p {
+		font-size: rem-calc(16);
+		line-height: 1.2em;
+	}
+}
+
 /* Calendar Widget */
 
 .widget_calendar {

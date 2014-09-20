@@ -1633,6 +1633,28 @@ a {
 .widget > ul:last-child > li:last-child > a, .widget > div > ul:last-child > li:last-child > a {
   border-bottom: 0; }
 
+/* Author Widget */
+.widget_author .widget-title {
+  margin-bottom: 1.25em;
+  margin-bottom: 1.25rem; }
+.widget_author .avatar {
+  width: 80px;
+  border-radius: 4px;
+  float: right;
+  margin-left: 1em;
+  margin-left: 1rem;
+  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
+  overflow: hidden; }
+.widget_author .author-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem; }
+.widget_author p {
+  font-size: 1rem;
+  line-height: 1.2em; }
+
 /* Calendar Widget */
 .widget_calendar {
   margin-bottom: 1.25em;
