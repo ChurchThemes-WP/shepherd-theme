@@ -1779,6 +1779,15 @@ Content imports
 .page-content, .entry-content, .entry-summary {
   margin: 1.5em 0 0; }
 
+.page-content {
+  margin-top: 0;
+  padding: 2.5em 3.5em;
+  padding: 2.5rem 3.5rem; }
+  @media screen and (max-width: 600px) {
+    .page-content {
+      padding: 0em 1em 0.5em 1em;
+      padding: 0rem 1rem 0.5rem 1rem; } }
+
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
