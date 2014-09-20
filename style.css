@@ -1718,6 +1718,17 @@ Content imports
   padding-left: 0;
   padding-right: 0; }
 
+.content-area .page-header {
+  padding: 1.5em 3.5em;
+  padding: 1.5rem 3.5rem;
+  border-bottom: 2px solid #eee; }
+  .content-area .page-header .page-title {
+    font-size: 2rem; }
+  @media screen and (max-width: 600px) {
+    .content-area .page-header {
+      padding: 0em 1em 0.5em 1em;
+      padding: 0rem 1rem 0.5rem 1rem; } }
+
 .hentry {
   margin: 0;
   padding: 2.5em 3.5em;
@@ -1863,6 +1874,87 @@ article.format-link {
 .comments-area {
   padding: 2.5em 3.5em;
   padding: 2.5rem 3.5rem; }
+  @media screen and (max-width: 600px) {
+    .comments-area {
+      padding: 1em;
+      padding: 1rem; } }
+
+/* Comments */
+/*
+ * Comment Thread
+ *
+*/
+#comments .reply-title, #comments .comments-title {
+  margin-bottom: 1em; }
+
+.comment-list {
+  padding: 0 1.5em;
+  padding: 0 1.5rem; }
+  .comment-list, .comment-list li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0; }
+  .comment-list li {
+    padding-left: 32px; }
+    .comment-list li article {
+      margin-bottom: 56px;
+      padding-left: 1em;
+      padding-left: 1rem; }
+    .comment-list li.pingback, .comment-list li.trackback {
+      border: 2px solid #ddd;
+      border-left: 0;
+      border-right: 0;
+      padding: 1em 0;
+      padding: 1rem 0;
+      margin-bottom: 1.4em;
+      margin-bottom: 2rem; }
+    .comment-list li .fn {
+      font-size: 1.1em;
+      font-style: normal;
+      font-weight: bold; }
+    .comment-list li .comment-author, .comment-list li .comment-metadata {
+      font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+    .comment-list li .comment-metadata {
+      margin-bottom: 1em; }
+  .comment-list .comment-reply-link:after {
+    content: " \2192"; }
+  .comment-list .comment-awaiting-moderation {
+    border-radius: 4px;
+    background-color: #d9d9d9;
+    color: #666;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    margin-top: 1em; }
+
+.comment-meta .avatar {
+  float: left;
+  margin-left: -32px;
+  left: -1em;
+  left: -1rem;
+  position: relative;
+  border-radius: 3px; }
+
+.comment-form label .required {
+  color: #cc0000; }
+
+#respond {
+  margin-top: 10px;
+  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  #respond h3#reply-title {
+    font-size: 1.5em !important; }
+  #respond .logged-in-as {
+    border-radius: 4px;
+    background-color: #ddd;
+    padding: 10px 15px;
+    font-size: 0.85em; }
+  #respond .comment-notes {
+    font-size: 0.87em;
+    margin-bottom: 2em;
+    color: #999; }
+  #respond .form-allowed-tags {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 2em; }
 
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .paging-navigation, .infinite-scroll.neverending .site-footer {
