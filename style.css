@@ -1307,7 +1307,9 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   border: none;
   -webkit-transform: 200ms background linear;
       -ms-transform: 200ms background linear;
-          transform: 200ms background linear; }
+          transform: 200ms background linear;
+  border-radius: 3px;
+  resize: none; }
   input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
     color: #111;
     outline: none;
@@ -1939,6 +1941,8 @@ article.format-link {
 
 .comment-form label .required {
   color: #cc0000; }
+.comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"] {
+  width: 100%; }
 
 #respond {
   margin-top: 10px;

@@ -110,6 +110,12 @@
 			color: #cc0000;
 		}
 	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"] {
+		width: 100%;
+	}
 }
 
 #respond {

@@ -65,6 +65,8 @@ textarea {
 	background-color: $color-text-input-background;
 	border: none;
 	transform: 200ms background linear;
+	border-radius: 3px;
+	resize: none;
 
 	&:focus {
 		color: $color-text-input-focus;
