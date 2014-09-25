@@ -8,6 +8,8 @@ $menu-height: 3.5rem !default;
 }
 
 .main-navigation {
+	position: relative;
+	z-index: 100;
 
 	.site-title{
 		float: left;
