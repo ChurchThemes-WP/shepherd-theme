@@ -72,6 +72,7 @@
 	> ul:last-child > li:last-child > a,
 	> div > ul:last-child > li:last-child > a {
 		border-bottom: 0;
+		padding-bottom: 0;
 	}
 }
 
@@ -104,6 +105,25 @@
 	p {
 		font-size: rem-calc(16);
 		line-height: 1.2em;
+	}
+}
+
+/* Calendar Widget */
+
+.widget_recent_comments {
+	li {
+		padding: .5em 0;
+		padding: .5rem 0;
+		border-bottom: 1px solid desaturate( darken( $body-bg, 10% ), 5% );
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		a {
+			border: 0;
+		}
 	}
 }
 
