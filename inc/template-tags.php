@@ -122,7 +122,7 @@ function shepherd_categorized_blog() {
  * @return bool/string
  */
 function shepherd_get_featured_image_url() {
-	$featured_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+	$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'featured' )[0];
 
 	if ( $featured_image_url == "" )
 		return false;

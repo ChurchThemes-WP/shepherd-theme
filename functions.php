@@ -30,6 +30,9 @@ function shepherd_setup() {
 	 */
 	load_theme_textdomain( 'shepherd', get_template_directory() . '/languages' );
 
+	// Add image size for featured images
+	add_image_size( 'featured', 1600, 900, 1 );
+
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
