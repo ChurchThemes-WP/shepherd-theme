@@ -16,6 +16,7 @@
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'shepherd' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'shepherd' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
 				<?php printf( __( 'Theme: %1$s by %2$s.', 'shepherd' ), 'Shepherd Pro', '<a href="https://upthemes.com/" rel="designer">UpThemes</a>' ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
 			</div><!-- .site-info -->
 		</div><!-- .site-footer-inner -->
 	</footer><!-- #colophon -->
