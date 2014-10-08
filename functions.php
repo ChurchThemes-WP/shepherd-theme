@@ -22,6 +22,8 @@ if ( ! function_exists( 'shepherd_setup' ) ) :
  */
 function shepherd_setup() {
 
+	global $post;
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -77,9 +79,27 @@ function shepherd_setup() {
 		'max_posts'  => 1,
 		'post_types' => array( 'post', 'page' ),
 	) );
+
 }
 endif; // shepherd_setup
 add_action( 'after_setup_theme', 'shepherd_setup' );
+
+
+function shepherd_single_header(){
+
+	if( is_singular() ){
+
+		if ( has_post_thumbnail( get_the_ID() ) ){
+			add_action( 'shepherd_header' , 'shepherd_single_title' );
+		} else {
+			add_action( 'shepherd_article_header' , 'shepherd_single_title' );
+		}
+
+	}
+
+}
+
+add_action( 'wp_head', 'shepherd_single_header' );
 
 /**
  * Register widget area.
