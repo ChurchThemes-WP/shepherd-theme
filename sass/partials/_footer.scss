@@ -26,20 +26,20 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, darken(
 
 		@media #{$large-up} {
 			width: 33.3333333333%;
-			padding: 0 10px;
+			padding: 0 15px;
 			float: left;
 		}
 
 		&:first-child {
 			@media #{$large-up} {
-				padding-right: 20px;
+				padding-right: 30px;
 				padding-left: 0;
 			}
 		}
 
 		&:last-child {
 			@media #{$large-up} {
-				padding-left: 20px;
+				padding-left: 30px;
 				padding-right: 0;
 			}
 		}
@@ -56,7 +56,10 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, darken(
 		}
 
 		.widget {
-			li {
+			margin-bottom: 2.25em;
+			margin-bottom: 2.25rem;
+
+			li, a {
 				border-color: $site-footer-text-color;
 				border-color: rgba($site-footer-text-color,.3);
 			}

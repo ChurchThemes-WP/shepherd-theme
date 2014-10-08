@@ -2183,15 +2183,15 @@ img[class*="wp-image-"] {
     @media only screen and (min-width:64.063em) {
       .footer-widget-area .footer-widget {
         width: 33.3333333333%;
-        padding: 0 10px;
+        padding: 0 15px;
         float: left; } }
     @media only screen and (min-width:64.063em) {
       .footer-widget-area .footer-widget:first-child {
-        padding-right: 20px;
+        padding-right: 30px;
         padding-left: 0; } }
     @media only screen and (min-width:64.063em) {
       .footer-widget-area .footer-widget:last-child {
-        padding-left: 20px;
+        padding-left: 30px;
         padding-right: 0; } }
     .footer-widget-area .footer-widget .widget-title {
       color: #7b7b7b;
@@ -2202,9 +2202,12 @@ img[class*="wp-image-"] {
       font-weight: bold;
       border-bottom: 2px solid #626262;
       border-radius: 0; }
-    .footer-widget-area .footer-widget .widget li {
-      border-color: #626262;
-      border-color: rgba(97, 97, 97, 0.3); }
+    .footer-widget-area .footer-widget .widget {
+      margin-bottom: 2.25em;
+      margin-bottom: 2.25rem; }
+      .footer-widget-area .footer-widget .widget li, .footer-widget-area .footer-widget .widget a {
+        border-color: #626262;
+        border-color: rgba(97, 97, 97, 0.3); }
     .footer-widget-area .footer-widget .widget_calendar #calendar_wrap {
       padding-right: 0; }
 
