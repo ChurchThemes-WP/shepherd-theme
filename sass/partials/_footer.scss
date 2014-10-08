@@ -18,6 +18,56 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, darken(
 	}
 }
 
+.footer-widget-area {
+	overflow: hidden;
+
+	.footer-widget {
+		padding: 0 20px;
+
+		@media #{$large-up} {
+			width: 33.3333333333%;
+			padding: 0 10px;
+			float: left;
+		}
+
+		&:first-child {
+			@media #{$large-up} {
+				padding-right: 20px;
+				padding-left: 0;
+			}
+		}
+
+		&:last-child {
+			@media #{$large-up} {
+				padding-left: 20px;
+				padding-right: 0;
+			}
+		}
+
+		.widget-title {
+			color: $site-footer-anchor-color;
+			padding: 0 0 .5em 0;
+			padding: 0 0 .5rem 0;
+			left: auto;
+			background: transparent;
+			font-weight: bold;
+			border-bottom: 2px solid $site-footer-text-color;
+			border-radius: 0;
+		}
+
+		.widget {
+			li {
+				border-color: $site-footer-text-color;
+				border-color: rgba($site-footer-text-color,.3);
+			}
+		}
+
+		.widget_calendar #calendar_wrap {
+			padding-right: 0;
+		}
+	}
+}
+
 .site-info{
 	text-align: center;
 }

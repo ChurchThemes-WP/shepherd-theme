@@ -2176,6 +2176,38 @@ img[class*="wp-image-"] {
     .site-footer a:hover {
       color: #888888; }
 
+.footer-widget-area {
+  overflow: hidden; }
+  .footer-widget-area .footer-widget {
+    padding: 0 20px; }
+    @media only screen and (min-width:64.063em) {
+      .footer-widget-area .footer-widget {
+        width: 33.3333333333%;
+        padding: 0 10px;
+        float: right; } }
+    @media only screen and (min-width:64.063em) {
+      .footer-widget-area .footer-widget:first-child {
+        padding-left: 20px;
+        padding-right: 0; } }
+    @media only screen and (min-width:64.063em) {
+      .footer-widget-area .footer-widget:last-child {
+        padding-right: 20px;
+        padding-left: 0; } }
+    .footer-widget-area .footer-widget .widget-title {
+      color: #7b7b7b;
+      padding: 0 0 0.5em 0;
+      padding: 0 0 0.5rem 0;
+      right: auto;
+      background: transparent;
+      font-weight: bold;
+      border-bottom: 2px solid #626262;
+      border-radius: 0; }
+    .footer-widget-area .footer-widget .widget li {
+      border-color: #626262;
+      border-color: rgba(97, 97, 97, 0.3); }
+    .footer-widget-area .footer-widget .widget_calendar #calendar_wrap {
+      padding-left: 0; }
+
 .site-info {
   text-align: center; }
 
