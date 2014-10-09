@@ -71,6 +71,34 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, darken(
 	}
 }
 
-.site-info{
+.site-footer .site-info {
 	text-align: center;
+
+	@media #{$large-up} {
+		text-align: left;
+		display: table;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.copyright-info {
+	@media #{$large-up} {
+		display: table-cell;
+		vertical-align: middle;
+		width: 65%;
+	}
+}
+
+footer .social-menu {
+	@media #{$large-up} {
+		display: table-cell;
+		vertical-align: middle;
+		width: 35%;
+
+		ul {
+			text-align: right;
+			margin: 0;
+		}
+	}
 }

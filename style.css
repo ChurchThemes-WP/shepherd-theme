@@ -2211,8 +2211,29 @@ img[class*="wp-image-"] {
     .footer-widget-area .footer-widget .widget_calendar #calendar_wrap {
       padding-right: 0; }
 
-.site-info {
+.site-footer .site-info {
   text-align: center; }
+  @media only screen and (min-width:64.063em) {
+    .site-footer .site-info {
+      text-align: left;
+      display: table;
+      padding-left: 0;
+      padding-right: 0; } }
+
+@media only screen and (min-width:64.063em) {
+  .copyright-info {
+    display: table-cell;
+    vertical-align: middle;
+    width: 65%; } }
+
+@media only screen and (min-width:64.063em) {
+  footer .social-menu {
+    display: table-cell;
+    vertical-align: middle;
+    width: 35%; }
+    footer .social-menu ul {
+      text-align: right;
+      margin: 0; } }
 
 .featured-content {
   background-size: cover; }
