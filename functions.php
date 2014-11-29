@@ -84,22 +84,27 @@ function shepherd_setup() {
 endif; // shepherd_setup
 add_action( 'after_setup_theme', 'shepherd_setup' );
 
+/**
+ * Attach templates within theme.
+ */
+function shepherd_attach_templates(){
 
-function shepherd_single_header(){
+	add_action( 'shepherd_entry_header' , 'shepherd_single_title' );
 
 	if( is_singular() ){
 
+		add_action( 'shepherd_entry_after' , 'shepherd_author_meta' );
+
 		if ( has_post_thumbnail( get_the_ID() ) ){
+			remove_action( 'shepherd_entry_header' , 'shepherd_single_title' );
 			add_action( 'shepherd_header' , 'shepherd_single_title' );
-		} else {
-			add_action( 'shepherd_article_header' , 'shepherd_single_title' );
 		}
 
 	}
 
 }
 
-add_action( 'wp_head', 'shepherd_single_header' );
+add_action( 'wp_head', 'shepherd_attach_templates' );
 
 /**
  * Register widget area.
@@ -250,8 +255,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Load browser sync for localhost
- */
-get_template_part('inc/browser_sync_localhost');

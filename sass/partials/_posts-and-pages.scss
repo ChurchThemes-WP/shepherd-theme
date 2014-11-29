@@ -15,10 +15,17 @@
 		}
 
 		@media screen and (max-width: 600px) {
-			padding: 0em 1em .5em 1em;
-			padding: 0rem 1rem .5rem 1rem;
+			padding: 0em 1.5em 1.5em;
+			padding: 0rem 1.5rem 1.5rem;
 		}
 	}
+
+	.widget,
+	.search-form{
+		margin-bottom: 3em;
+		margin-bottom: 3rem;
+	}
+
 }
 
 .sticky {
@@ -31,8 +38,8 @@
 	border-bottom: 2px solid #eee;
 
 	@media screen and (max-width: 600px) {
-		padding: 0em 1em .5em 1em;
-		padding: 0rem 1rem .5rem 1rem;
+		padding: 0em 1.5em 1.5em;
+		padding: 0rem 1.5rem 1.5rem;
 	}
 
 	.entry-header {
@@ -94,7 +101,7 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.5em 0;
 
 	.has-featured-image & {
 		padding: 0 3.5em;
@@ -136,9 +143,12 @@
 	color: $small-font-color;
 	font-family: $header-font-family;
 	font-size: rem-calc(14);
-	border-top: 1px solid rgba(0,0,0,.1);
-	padding-top: 1em;
 	overflow: hidden;
+
+	.entry &{
+		border-top: 1px solid rgba(0,0,0,.1);
+		padding-top: 1em;
+			}
 
 	a{
 		color: $primary-color;

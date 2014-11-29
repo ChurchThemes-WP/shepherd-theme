@@ -1,10 +1,10 @@
 /*
 Theme Name: Shepherd Pro
-Theme URI: http://churchthemes.net/themes/shepherd-pro/
-Author: Automattic
-Author URI: http://churchthemes.net/
-Description: Shepherd Pro is the ultimate theme for pastors and ministry leaders.
-Version: 1.0
+Theme URI: https://churchthemes.net/themes/shepherd-pro/
+Author: ChurchThemes by UpThemes
+Author URI: https://churchthemes.net/
+Description: Shepherd Pro is the ultimate theme for faith leaders.
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: shepherd
@@ -43,3 +43,7 @@ and Blueprint http://www.blueprintcss.org/
 @import "partials/featured-content";
 @import "partials/genericons";
 @import "partials/social";
+
+body{
+	position: static;
+}

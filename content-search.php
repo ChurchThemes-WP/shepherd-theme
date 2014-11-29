@@ -12,26 +12,8 @@
 		$extra_classes[] = "has-featured-image";
 ?>
 <article id="post-<?php the_ID(); ?>" class="<?php echo implode( " ", get_post_class($extra_classes) ); ?>">
-	<?php if ( shepherd_get_featured_image_url() ) { ?>
-		<header class="entry-header" style="background-image: url('<?php echo shepherd_get_featured_image_url(); ?>')">
-	<?php } else { ?>
-		<header class="entry-header">
-	<?php } ?>
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			$format = get_post_format( get_the_ID() );
-			if ( false === $format ) {
-				$format = 'standard';
-			}
-			echo '<span class="post-format">' . $format . '</span>';
-			?>
-			<?php shepherd_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
 
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-	</header><!-- .entry-header -->
+	<?php do_action('shepherd_entry_header'); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>

@@ -62,10 +62,8 @@
 
 	li {
 		a {
-			display: block;
 			padding: .5em 0;
 			padding: .5rem 0;
-			border-bottom: 1px solid desaturate( darken( $body-bg, 10% ), 5% );
 		}
 	}
 
@@ -73,6 +71,13 @@
 	> div > ul:last-child > li:last-child > a {
 		border-bottom: 0;
 		padding-bottom: 0;
+	}
+}
+
+.widget_menu{
+	li a{
+		display: block;
+		border-bottom: 1px solid desaturate( darken( $body-bg, 10% ), 5% );
 	}
 }
 

@@ -8,9 +8,12 @@
 	if ( shepherd_get_featured_image_url() )
 		$extra_classes[] = "has-featured-image";
 ?>
+
+<?php do_action( 'shepherd_entry_before' ); ?>
+
 <article id="post-<?php the_ID(); ?>" class="<?php echo implode( " ", get_post_class($extra_classes) ); ?>">
 
-	<?php do_action( 'shepherd_article_header' ); ?>
+	<?php do_action('shepherd_entry_header'); ?>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -50,3 +53,5 @@
 		<?php endif; // End if 'post' == get_post_type() ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+<?php do_action( 'shepherd_entry_after' ); ?>

@@ -5,6 +5,10 @@
 #primary{
 	@extend .large-8;
 	@extend .columns;
+
+	.error404 &{
+		@extend .large-12;
+	}
 }
 
 #secondary{

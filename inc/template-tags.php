@@ -154,11 +154,25 @@ function shepherd_single_title(){
 				</div><!-- .entry-meta -->
 				<?php endif; ?>
 
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<?php if( is_single() ):
+					the_title( '<h1 class="entry-title">', '</h1>' );
+				else:
+					echo '<a href="' . get_permalink() . '">';
+					the_title( '<h2 class="entry-title">', '</h2>' );
+					echo '</a>';
+				endif; ?>
+
 			</div><!-- .entry-header-column -->
 		</div><!-- .entry-header-row -->
 	</header><!-- .entry-header -->
 <?php
+}
+
+/**
+ * Attach author meta to single post template.
+ */
+function shepherd_author_meta(){
+	get_template_part( 'author', 'meta' );
 }
 
 /**
