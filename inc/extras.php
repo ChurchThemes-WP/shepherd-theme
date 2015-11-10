@@ -65,7 +65,10 @@ function shepherd_wp_title( $title, $sep ) {
 
 	return $title;
 }
+// Let WP 4.1 handle titles if possible
+if( ! function_exists( '_wp_render_title_tag') ) :
 add_filter( 'wp_title', 'shepherd_wp_title', 10, 2 );
+endif;
 
 /**
  * Sets the authordata global when viewing an author archive.
