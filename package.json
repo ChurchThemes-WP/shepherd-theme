@@ -23,6 +23,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-sass": "^0.7.3",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-cssjanus": "^0.2.4",
     "grunt-pot": "~0.1.2",
     "grunt-sass": "^0.14.0"
   }
